@@ -3,8 +3,11 @@ import "@fontsource/manrope";
 
 const Nav = () => {
   return (
-    <div className=" pl-12 pt-4 pr-12 blackfrop-blur-xl items-center flex gap-10 justify-between pb-4 shadow-sm">
-      <img src="/img/shopEasy.png" alt="logo" className="w-40" />
+    <div className=" pl-8 pt-4 pr-12 blackfrop-blur-xl items-center flex gap-10 justify-between pb-4 shadow-sm">
+      {/* <img src="/img/shopEasy.png" alt="logo" className="w-40" /> */}
+      <p className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-2xl">
+        SHOPEASY
+      </p>
       <label className="border-gray-500 border  rounded-2xl w-[38%] p-1">
         <input
           className="rounded-2xl w-[95%] pl-5 outline-none"
@@ -14,7 +17,7 @@ const Nav = () => {
       </label>
       <ul className="mr-8 flex gap-7  list-none cursor-pointer  ">
         <li className="hover:text-cyan-700 text-slate-700">Home</li>
-        <li className="hover:text-cyan-700 font-['manrope'] text-slate-700">
+        <li className="hover:text-cyan-700 font-['manrope'] text-slate-500">
           Laptop
         </li>
         <li className="hover:text-cyan-700 font-['manrope'] text-slate-700">
