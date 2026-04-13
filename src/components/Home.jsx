@@ -19,6 +19,15 @@ const Home = () => {
           Engineered for absolute performance. Featuring the M5 Silicon
           architecture and a Liquid Retina XDR display that redefines clarity.
         </p>
+
+        <div className="flex gap-5 mt-10">
+          <button className="bg-slate-900 text-white px-8 py-3  font-medium hover:bg-slate-800 transition-all duration-300">
+            Shop Now
+          </button>
+          <button className="border-slate-300 border text-slate-900 px-8 py-3 font-medium hover:bg-slate-900 hover:text-white transition-all duration-300">
+            Learn More
+          </button>
+        </div>
       </section>
       <section>
         <img
