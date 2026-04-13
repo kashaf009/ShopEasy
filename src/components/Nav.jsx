@@ -3,7 +3,7 @@ import "@fontsource/manrope";
 
 const Nav = () => {
   return (
-    <div className="fixed z-40 top-0 w-full pl-8 pt-5 pr-12 blackfrop-blur-xl items-center flex gap-10 mx-auto justify-between pb-5 shadow-sm">
+    <div className="fixed z-40 top-0 w-full pl-8 pt-5 pr-12 backdrop-blur-xl items-center flex gap-10 mx-auto justify-between pb-5 shadow-sm">
       {/* <img src="/img/shopEasy.png" alt="logo" className="w-40" /> */}
       <p className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-2xl">
         SHOPEASY

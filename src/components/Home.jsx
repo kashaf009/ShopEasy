@@ -29,7 +29,7 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <section>
+      <section className="mb-45">
         <img
           className="w-[90%] h-full object-cover mx-auto  rounded-3xl"
           src="https://static0.pocketlintimages.com/wordpress/wp-content/uploads/2023/02/apple-mac-tips-10.jpg?q=49&fit=crop&w=750&dpr=2"
