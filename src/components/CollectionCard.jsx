@@ -3,9 +3,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const CollectionCard = ({ icon, title, description }) => {
   return (
-    <div className="group p-8 bg-white rounded-xl mb-10 border-b-2 border-transparent hover:border-slate-900 transition-all duration-300">
+    <div className="group p-8 cursor-pointer bg-white rounded-xl mb-25 border-b-2 border-transparent hover:border-slate-900 transition-all duration-300">
       <div className="bg-gray-200 group-hover:bg-slate-900 transition-all duration-300 w-12 h-12 flex items-center justify-center  mb-6 rounded-md">
-        <span className="h-8 w-8 group-hover:text-white transition-all duration-300">
+        <span className="h-7 w-7 group-hover:text-white transition-all duration-300">
           {icon}
         </span>
       </div>

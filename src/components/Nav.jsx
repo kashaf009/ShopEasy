@@ -11,10 +11,10 @@ const Nav = () => {
 
       <ul className="  ml-8 flex gap-7  list-none cursor-pointer  ">
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm  text-slate-500 font-['manrope'] ">
-          Home
+          New
         </li>
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
-          Laptop
+          Home
         </li>
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
           Mobile
@@ -23,10 +23,10 @@ const Nav = () => {
           Tablet
         </li>
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
-          Headphone
+          Laptop
         </li>
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
-          Cart
+          Headphone
         </li>
       </ul>
 
