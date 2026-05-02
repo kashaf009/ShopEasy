@@ -30,16 +30,32 @@ const NewSection = () => {
             items;
 
           return (
-            <div className="bg-gray-100 rounded-xl shadow-md">
+            <div className="bg-gray-90 w-80 rounded-xl shadow-md">
               
                 <img
-                  className="w-80 rounded-t-xl h-70 object-cover"
+                  className="w-80 rounded-t-xl h-50 object-cover"
                   src={image}
                   alt={name}
                 />
-           
-              <h2>{name}</h2>
-              <p>₹{price}</p>
+           <div className="p-3 ">
+              <h2 className="text-md mb-1 text-slate-900 font-['manrope'] font-bold">{name}</h2>
+              <p className="text-md ">₹{price}</p>
+              <p className="mb-2">{specs.display || specs.battery||specs.video || specs.resolution || specs.connectivity}</p>
+              <p className="text-sm text-slate-500 line-clamp-2">{description}</p>
+              <div className="flex justify-between gap-10">
+              <button>
+                <p className="bg-slate-900 text-md  text-white w-full mt-5 py-1 px-5 rounded-md hover:bg-slate-800 transition-all duration-300">
+                 Add to Cart
+                </p>
+              </button>
+
+              <button>
+                <p className="bg-gray-600 text-md  text-white w-full mt-5 py-1 px-5 rounded-md hover:bg-gray-700 transition-all duration-300">
+                 Buy now
+                </p>
+              </button>
+              </div>
+              </div>
             </div>
           );
         })}
