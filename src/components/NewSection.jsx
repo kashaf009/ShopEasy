@@ -15,7 +15,7 @@ const NewSection = () => {
   }, []);
 
   return (
-    <div className="pt-25 ml-7 ">
+    <div className="pt-25 ml-7 mb-20 ">
       <h1 className="font-['manrope'] font-bold text-2xl text-slate-900 uppercase ">
         New Arrival
       </h1>
@@ -26,11 +26,12 @@ const NewSection = () => {
       <div className="flex gap-5 mt-10 flex-wrap">
       {newArrival &&
         newArrival.map((items) => {
-          const { id, name, price, launched, description, image, specs } =
+          const { id, name, price, description, image, specs } =
             items;
 
           return (
-            <div className="bg-gray-90 w-80 rounded-xl shadow-md">
+            <div className="bg-gray-90 w-80 border-b-2 border-transparent  transition-all duration-300
+             hover:border-b-2 hover:border-black rounded-xl shadow-md">
               
                 <img
                   className="w-80 rounded-t-xl h-50 object-cover"
