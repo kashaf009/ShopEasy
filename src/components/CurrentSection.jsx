@@ -5,6 +5,9 @@ import { IoLaptopOutline } from "react-icons/io5";
 import { IoIosTabletPortrait } from "react-icons/io";
 
 const CurrentSection = () => {
+  const handleClick = (title) => {
+    console.log(title);
+  };
   const Collections = [
     {
       icon: <CiMobile3 className="h-7 w-7" />,
@@ -38,10 +41,7 @@ const CurrentSection = () => {
         </p>
       </div>
 
-      <section
-        onClick={(title) => {}}
-        className="grid grid-cols-4 gap-5  pr-10"
-      >
+      <section className="grid grid-cols-4 gap-5  pr-10">
         {Collections.map((items) => (
           <CollectionCard
             icon={items.icon}
