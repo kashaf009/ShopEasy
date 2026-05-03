@@ -13,8 +13,8 @@
       "battery": "Up to 18 hours",
       "os": "macOS Tahoe"
     },
-    "description": "World's most popular laptop with M5 chip, 4x faster AI performance, Wi-Fi 7, and 512GB base storage.",
-    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+    "description": "World's most popular laptop with M5 chip, 4x faster AI performance, Wi-Fi 7, and 512GB base storage. Great for professionals and students.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoTOhYTfq7z0GTK4_ho7LCwm4O8XqONCgWdA&s"
   },
   {
     "id": 2,
@@ -30,8 +30,8 @@
       "battery": "Up to 14 hours",
       "os": "Windows 11"
     },
-    "description": "Premium ultrabook with edge-to-edge keyboard and stunning OLED display.",
-    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    "description": "Premium ultrabook with edge-to-edge keyboard and stunning OLED display. Great for professionals and students.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgacukSXcE-iOQsZtaanXOPBV1YsyUEse5Q&s"
   },
   {
     "id": 3,
@@ -47,8 +47,8 @@
       "battery": "Up to 15 hours",
       "os": "Windows 11"
     },
-    "description": "Convertible laptop with premium build and touchscreen OLED panel.",
-    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+    "description": "Convertible laptop with premium build and touchscreen OLED panel. Great for professionals and students.",
+    "image": "https://media.wired.com/photos/6609e9d8ae856456d50d16c2/master/pass/HP-Spectre-x360-front-Abstract-Background-SOURCE-HP.jpg"
   },
   {
     "id": 4,
@@ -64,8 +64,8 @@
       "battery": "Up to 12 hours",
       "os": "Windows 11"
     },
-    "description": "Lightweight productivity laptop with solid performance.",
-    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+    "description": "Lightweight productivity laptop with solid performance. Great for professionals and students.",
+    "image": "https://media.wired.com/photos/670839498130ea3440fa5cee/master/w_1600%2Cc_limit/Lenovo-Yoga-Slim-7i-Aura-Edition-(Copilot+-PC)-Front-Open-Reviewer-Photos-SOURCE-Julian-Chokkattu.jpg"
   },
   {
     "id": 5,
@@ -81,8 +81,8 @@
       "battery": "Up to 10 hours",
       "os": "Windows 11"
     },
-    "description": "Compact gaming powerhouse with high refresh rate display.",
-    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+    "description": "Compact gaming powerhouse with high refresh rate display. Great for gamers and content creators.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CIHpdolfpg7lhpD3VKa2k752h5dIbqZi_g&s"
   },
   {
     "id": 6,
@@ -98,8 +98,8 @@
       "battery": "Up to 12 hours",
       "os": "Windows 11"
     },
-    "description": "Affordable performance laptop with dedicated GPU.",
-    "image": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546"
+    "description": "Affordable performance laptop with dedicated GPU. Great for students and casual users.",
+    "image": "https://i.pcmag.com/imagery/reviews/02mELIW1WYVTyEQyapNxUFw-1..v1704307627.jpg"
   },
   {
     "id": 7,
@@ -115,8 +115,8 @@
       "battery": "Up to 8 hours",
       "os": "Windows 11"
     },
-    "description": "High-end creator laptop with powerful GPU.",
-    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    "description": "High-end creator laptop with powerful GPU. Great for creative professionals and power users.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQsxHUb58m8U_qG5hoc4LShRcSfR9eBoLnKg&s"
   },
   {
     "id": 8,
@@ -132,8 +132,8 @@
       "battery": "Up to 16 hours",
       "os": "Windows 11"
     },
-    "description": "Sleek laptop with AMOLED display and great battery.",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    "description": "Sleek laptop with AMOLED display and great battery. Great for professionals and students.",
+    "image": "https://www.barcodegiant.com/media/catalog/product/cache/4/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/1/e/f/9/1ef904d4b51f8d9bc8b0a07fdef5e1ccdaed59c7_galaxy_book4_pro_1.jpg"
   },
   {
     "id": 9,
@@ -149,8 +149,8 @@
       "battery": "Up to 15 hours",
       "os": "Windows 11"
     },
-    "description": "Minimalist laptop with premium design and smooth UI.",
-    "image": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28"
+    "description": "Minimalist laptop with premium design and smooth UI. Great for professionals and students.",
+    "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Carousel-Surface-Laptop-6-002?scl=1"
   },
   {
     "id": 10,
@@ -166,8 +166,8 @@
       "battery": "Up to 7 hours",
       "os": "Windows 11"
     },
-    "description": "Gaming laptop with high performance and cooling.",
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+    "description": "Gaming laptop with high performance and cooling. Great for gamers and content creators.",
+    "image": "https://p4-ofp.static.pub//fes/cms/2024/09/19/9mi4xh3z07ddp4jhxwyadcf0mkl15v972949.png"
   },
   {
     "id": 11,
@@ -183,8 +183,8 @@
       "battery": "Up to 11 hours",
       "os": "Windows 11"
     },
-    "description": "Budget-friendly laptop with OLED display.",
-    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed"
+    "description": "Budget-friendly laptop with OLED display. Great for students and casual users.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCk-Invra8YzRnmevbEXxxwKCJChWKdTh-0g&s"
   },
   {
     "id": 12,
@@ -201,7 +201,7 @@
       "os": "Windows 11"
     },
     "description": "Compact ultrabook with OLED visuals.",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIegdPLRyf86wA4qDVyDp4pOLWeEnbYBWCdg&s"
   },
   {
     "id": 13,
@@ -217,8 +217,8 @@
       "battery": "Up to 8 hours",
       "os": "Windows 11"
     },
-    "description": "Mid-range gaming laptop with solid GPU.",
-    "image": "https://images.unsplash.com/photo-1565372910946-3bffb2f8d6c5"
+    "description": "Mid-range gaming laptop with solid GPU. Great for gamers on a budget.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegLqPEB9D6T3iuXRPvIVe-pXnWvTURceo4Q&s"
   },
   {
     "id": 14,
@@ -234,8 +234,8 @@
       "battery": "Up to 10 hours",
       "os": "Windows 11"
     },
-    "description": "Reliable everyday laptop for students.",
-    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+    "description": "Reliable everyday laptop for students. Great for educational use and general productivity.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD58i5sKVvmxHhIQGA7jewkgXXPzbbdtrCkA&s"
   },
   {
     "id": 15,
@@ -251,8 +251,8 @@
       "battery": "Up to 20 hours",
       "os": "macOS Tahoe"
     },
-    "description": "Powerful MacBook for professionals and creators.",
-    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+    "description": "Powerful MacBook for professionals and creators. Great for creative professionals and power users.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAKnIFpqKtZvnOa3VN0lEDq8qSa8UmpJ7YA&s"
   },
   {
     "id": 16,
@@ -268,8 +268,8 @@
       "battery": "Up to 9 hours",
       "os": "Windows 11"
     },
-    "description": "Premium gaming laptop with sleek design.",
-    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+    "description": "Premium gaming laptop with sleek design. Great for gamers and content creators.",
+    "image": "https://assets2.razerzone.com/images/pnx.assets/344f716dfd82e35fee3c86f4354240c3/razer-blade-15-fhd-carousel-768x500-mobile.webp"
   },
   {
     "id": 17,
@@ -286,7 +286,7 @@
       "os": "Windows 11"
     },
     "description": "Ultra-light laptop with huge battery life.",
-    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpSWOyp6n0oZQ1m1JKE-rlm-d5vz7lBRDKQ&s"
   },
   {
     "id": 18,
@@ -302,8 +302,8 @@
       "battery": "Up to 9 hours",
       "os": "Windows 11"
     },
-    "description": "Gaming laptop with powerful graphics performance.",
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+    "description": "Gaming laptop with powerful graphics performance. Great for gamers and content creators.",
+    "image": "https://sm.pcmag.com/pcmag_me/review/h/hp-omen-16/hp-omen-16-2023-13th-gen-core_87uc.jpg"
   },
   {
     "id": 19,
@@ -319,8 +319,8 @@
       "battery": "Up to 8 hours",
       "os": "Windows 11"
     },
-    "description": "Affordable laptop for daily tasks.",
-    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    "description": "Affordable and powerful laptop for daily tasks. Great for students and casual users.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8J-4X6_lqNd8zJUgUQTtljXBj1arm7cigw&s"
   },
   {
     "id": 20,
@@ -336,7 +336,7 @@
       "battery": "Up to 12 hours",
       "os": "Windows 11"
     },
-    "description": "Balanced laptop with performance and portability.",
-    "image": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546"
+    "description": "The ideal combination of slim profile, power and speed Supercharged performance with the latest AMD Ryzen™ 7000 U-Series processors, up to 16GB of memory, and up to 512GB of storage.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_ovifVSeftvMveDIPPDadslYln8SyeJUmA&s"
   }
 ]
