@@ -2,12 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const NewSection = () => {
-  const [newArrival, setNewArrival] = useState("");
+  const [newArrival, setNewArrival] = useState([]);
 
   useEffect(() => {
     const fetchNewArrival = async () => {
       const res = await axios.get("./data/newArrival.json");
-      console.log(res);
+      
 
       setNewArrival(res.data);
     };

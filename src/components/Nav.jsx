@@ -2,13 +2,15 @@ import React from "react";
 import "@fontsource/manrope";
 import { Link, useNavigate } from "react-router-dom";
 
-
 const Nav = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="fixed z-40 top-0 w-full pl-8 pt-5 pr-12 backdrop-blur-xl items-center flex gap-10 mx-auto justify-between pb-5 shadow-sm">
       {/* <img src="/img/shopEasy.png" alt="logo" className="w-40" /> */}
-      <p onClick={()=>(navigate("/"))} className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-2xl">
+      <p
+        onClick={() => navigate("/")}
+        className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-2xl"
+      >
         SHOPEASY
       </p>
 
@@ -28,9 +30,12 @@ const Nav = () => {
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium  text-sm font-['manrope'] text-slate-500">
           Tablet
         </li>
-        <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
+        <Link
+          to="/laptop"
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500"
+        >
           Laptop
-        </li>
+        </Link>
         <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
           Headphone
         </li>

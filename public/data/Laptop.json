@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "category": "laptop",
+    "name": "Apple MacBook Air M5 (13-inch)",
+    "price": 114900,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "Apple M5 (10-core CPU, 10-core GPU)",
+      "ram": "16GB Unified Memory",
+      "storage": "512GB SSD",
+      "display": "13.6-inch Liquid Retina",
+      "battery": "Up to 18 hours",
+      "os": "macOS Tahoe"
+    },
+    "description": "World's most popular laptop with M5 chip, 4x faster AI performance, Wi-Fi 7, and 512GB base storage.",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 2,
+    "category": "laptop",
+    "name": "Dell XPS 13 Plus",
+    "price": 129999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "Intel Core Ultra 7",
+      "ram": "16GB LPDDR5",
+      "storage": "1TB SSD",
+      "display": "13.4-inch OLED",
+      "battery": "Up to 14 hours",
+      "os": "Windows 11"
+    },
+    "description": "Premium ultrabook with edge-to-edge keyboard and stunning OLED display.",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+  },
+  {
+    "id": 3,
+    "category": "laptop",
+    "name": "HP Spectre x360 14",
+    "price": 119999,
+    "launched": "February 2026",
+    "specs": {
+      "processor": "Intel Core Ultra 5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "14-inch OLED Touch",
+      "battery": "Up to 15 hours",
+      "os": "Windows 11"
+    },
+    "description": "Convertible laptop with premium build and touchscreen OLED panel.",
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+  },
+  {
+    "id": 4,
+    "category": "laptop",
+    "name": "Lenovo Yoga Slim 7i",
+    "price": 99999,
+    "launched": "December 2025",
+    "specs": {
+      "processor": "Intel Core i7 13th Gen",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "14-inch IPS",
+      "battery": "Up to 12 hours",
+      "os": "Windows 11"
+    },
+    "description": "Lightweight productivity laptop with solid performance.",
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+  },
+  {
+    "id": 5,
+    "category": "laptop",
+    "name": "Asus ROG Zephyrus G14",
+    "price": 149999,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "AMD Ryzen 9 8945HS",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "display": "14-inch QHD 165Hz",
+      "battery": "Up to 10 hours",
+      "os": "Windows 11"
+    },
+    "description": "Compact gaming powerhouse with high refresh rate display.",
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+  },
+  {
+    "id": 6,
+    "category": "laptop",
+    "name": "Acer Swift X",
+    "price": 89999,
+    "launched": "November 2025",
+    "specs": {
+      "processor": "AMD Ryzen 7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "14-inch FHD",
+      "battery": "Up to 12 hours",
+      "os": "Windows 11"
+    },
+    "description": "Affordable performance laptop with dedicated GPU.",
+    "image": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546"
+  },
+  {
+    "id": 7,
+    "category": "laptop",
+    "name": "MSI Stealth 16 Studio",
+    "price": 179999,
+    "launched": "February 2026",
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "32GB",
+      "storage": "2TB SSD",
+      "display": "16-inch UHD",
+      "battery": "Up to 8 hours",
+      "os": "Windows 11"
+    },
+    "description": "High-end creator laptop with powerful GPU.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  },
+  {
+    "id": 8,
+    "category": "laptop",
+    "name": "Samsung Galaxy Book4 Pro",
+    "price": 139999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "Intel Core Ultra 7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": "14-inch AMOLED",
+      "battery": "Up to 16 hours",
+      "os": "Windows 11"
+    },
+    "description": "Sleek laptop with AMOLED display and great battery.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+  },
+  {
+    "id": 9,
+    "category": "laptop",
+    "name": "Microsoft Surface Laptop 6",
+    "price": 124999,
+    "launched": "April 2026",
+    "specs": {
+      "processor": "Intel Core Ultra 5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "13.5-inch PixelSense",
+      "battery": "Up to 15 hours",
+      "os": "Windows 11"
+    },
+    "description": "Minimalist laptop with premium design and smooth UI.",
+    "image": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28"
+  },
+  {
+    "id": 10,
+    "category": "laptop",
+    "name": "Lenovo Legion 5 Pro",
+    "price": 159999,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "AMD Ryzen 9",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "display": "16-inch QHD 165Hz",
+      "battery": "Up to 7 hours",
+      "os": "Windows 11"
+    },
+    "description": "Gaming laptop with high performance and cooling.",
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+  },
+  {
+    "id": 11,
+    "category": "laptop",
+    "name": "HP Pavilion Plus 14",
+    "price": 79999,
+    "launched": "October 2025",
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "14-inch OLED",
+      "battery": "Up to 11 hours",
+      "os": "Windows 11"
+    },
+    "description": "Budget-friendly laptop with OLED display.",
+    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed"
+  },
+  {
+    "id": 12,
+    "category": "laptop",
+    "name": "Asus ZenBook 14 OLED",
+    "price": 109999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": "14-inch OLED",
+      "battery": "Up to 13 hours",
+      "os": "Windows 11"
+    },
+    "description": "Compact ultrabook with OLED visuals.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475"
+  },
+  {
+    "id": 13,
+    "category": "laptop",
+    "name": "Acer Nitro 5",
+    "price": 94999,
+    "launched": "December 2025",
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": "15.6-inch 144Hz",
+      "battery": "Up to 8 hours",
+      "os": "Windows 11"
+    },
+    "description": "Mid-range gaming laptop with solid GPU.",
+    "image": "https://images.unsplash.com/photo-1565372910946-3bffb2f8d6c5"
+  },
+  {
+    "id": 14,
+    "category": "laptop",
+    "name": "Dell Inspiron 14",
+    "price": 69999,
+    "launched": "September 2025",
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "display": "14-inch FHD",
+      "battery": "Up to 10 hours",
+      "os": "Windows 11"
+    },
+    "description": "Reliable everyday laptop for students.",
+    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+  },
+  {
+    "id": 15,
+    "category": "laptop",
+    "name": "Apple MacBook Pro M5 (16-inch)",
+    "price": 239900,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "Apple M5 Pro",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "display": "16-inch Liquid Retina XDR",
+      "battery": "Up to 20 hours",
+      "os": "macOS Tahoe"
+    },
+    "description": "Powerful MacBook for professionals and creators.",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 16,
+    "category": "laptop",
+    "name": "Razer Blade 15",
+    "price": 199999,
+    "launched": "February 2026",
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "display": "15.6-inch OLED",
+      "battery": "Up to 9 hours",
+      "os": "Windows 11"
+    },
+    "description": "Premium gaming laptop with sleek design.",
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+  },
+  {
+    "id": 17,
+    "category": "laptop",
+    "name": "LG Gram 16",
+    "price": 134999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": "16-inch WQXGA",
+      "battery": "Up to 17 hours",
+      "os": "Windows 11"
+    },
+    "description": "Ultra-light laptop with huge battery life.",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+  },
+  {
+    "id": 18,
+    "category": "laptop",
+    "name": "HP Omen 16",
+    "price": 139999,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "AMD Ryzen 7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": "16-inch 165Hz",
+      "battery": "Up to 9 hours",
+      "os": "Windows 11"
+    },
+    "description": "Gaming laptop with powerful graphics performance.",
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+  },
+  {
+    "id": 19,
+    "category": "laptop",
+    "name": "Asus Vivobook 15",
+    "price": 59999,
+    "launched": "August 2025",
+    "specs": {
+      "processor": "Intel Core i3",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "display": "15.6-inch FHD",
+      "battery": "Up to 8 hours",
+      "os": "Windows 11"
+    },
+    "description": "Affordable laptop for daily tasks.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  },
+  {
+    "id": 20,
+    "category": "laptop",
+    "name": "Lenovo IdeaPad Slim 5",
+    "price": 74999,
+    "launched": "November 2025",
+    "specs": {
+      "processor": "AMD Ryzen 5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "14-inch FHD",
+      "battery": "Up to 12 hours",
+      "os": "Windows 11"
+    },
+    "description": "Balanced laptop with performance and portability.",
+    "image": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546"
+  }
+]
