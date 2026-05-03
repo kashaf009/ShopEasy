@@ -39,7 +39,7 @@ const Laptop = () => {
                   alt={name}
                 />
 
-                <div className="px-3">
+                <div className="px-3 py-3">
                   <h1 className="text-md mb-1 text-slate-900 font-['manrope'] font-bold">
                     {name}
                   </h1>
@@ -47,6 +47,19 @@ const Laptop = () => {
                   <p className="text-sm text-slate-500 line-clamp-2">
                     {description}
                   </p>
+                  <div className="flex justify-between gap-10">
+                    <button>
+                      <p className="bg-slate-900 text-md  text-white w-full mt-5 py-1 px-5 rounded-md hover:bg-slate-800 transition-all duration-300">
+                        Add to Cart
+                      </p>
+                    </button>
+
+                    <button>
+                      <p className="bg-gray-600 text-md  text-white w-full mt-5 py-1 px-5 rounded-md hover:bg-gray-700 transition-all duration-300">
+                        Buy now
+                      </p>
+                    </button>
+                  </div>
                 </div>
               </div>
             );
