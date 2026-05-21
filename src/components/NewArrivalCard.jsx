@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewArrivalCard = ({ name, price, image, description }) => {
+const NewArrivalCard = ({ name, price, image, description, specs }) => {
   return (
     <div className="shadow-md  ">
       {/* {newArrivals.slice(1).map((items) => {})} */}
@@ -13,10 +13,20 @@ const NewArrivalCard = ({ name, price, image, description }) => {
           ₹{price}
         </p>
       </div>
-      <p className="text-slate-500 px-5 mb-5 text-xs">{description}</p>
-
-      <div className="px-5">
-        <button className="bg-white w-full border-2 mr-5 text-xl border-slate-900  text-slate-900 px-4 py-1  hover:bg-slate-800 hover:text-white transition-all duration-300">
+      <p className="text-slate-500 px-5 mb-5 text-xs">
+        {description}
+      </p>
+      {specs && (
+        <div className="flex flex-wrap gap-1.5 px-5 mb-3">
+          {Object.entries(specs).map(([key, value]) => (
+            <span key={key} className="text-[10px] font-bold bg-slate-50 border border-slate-100 text-slate-600 px-2.5 py-1 rounded-lg flex items-center gap-1">
+              {`${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="px-5 ">
+        <button className="bg-white w-full border-2 border-slate-900 text-slate-900 font-medium px-4 py-2 hover:bg-slate-800 hover:text-white transition-all">
           Shop Now
         </button>
       </div>
@@ -25,3 +35,5 @@ const NewArrivalCard = ({ name, price, image, description }) => {
 };
 
 export default NewArrivalCard;
+
+

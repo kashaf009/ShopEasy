@@ -23,7 +23,7 @@ const CollectionCard = ({ icon, title, description }) => {
 
       <p
         onClick={() => handleClick(title)}
-        className="text-slate-900 uppercase flex items-center font-semibold tracking-[0.1em] text-sm font-['manrope']"
+        className="text-slate-900 uppercase flex items-center font-semibold tracking-widest text-sm font-['manrope']"
       >
         Explore
         <span className="ml-2 group-hover:translate-x-2 transition-all duration-300">

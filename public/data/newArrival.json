@@ -77,7 +77,10 @@
       "type": "Over-ear wireless",
       "anc": "Yes",
       "battery": "30 hours",
-      "connectivity": "Bluetooth 5.3"
+      "connectivity": "Bluetooth 5.3",
+      "processor": "N/A",
+      "ram": "N/A",
+      "storage": "N/A"
     },
     "description": "Sony's best-ever noise-cancelling headphones with industry-leading ANC and 30hr battery.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi0ONHP2vg2bq-PxKbADp3Ahxsxhv-5YB3sg&s"
@@ -146,7 +149,8 @@
     "launched": "2026",
     "specs": {
       "anc": "Yes",
-      "battery": "30 hours"
+      "battery": "30 hours",
+      "type": "Earbuds"
     },
     "description": "Improved ANC and spatial audio.",
     "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-hero-select-202509_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1758077264181"
