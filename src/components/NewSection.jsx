@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useCart } from "../context/CartContext";
 
 // Helper functions (copied from Laptop.jsx)
 const getRamSize = (ramStr) => {
@@ -38,6 +39,7 @@ const getProcessorCategory = (procStr) => {
 };
 
 const NewSection = () => {
+  const { addToCart } = useCart();
   const [newArrival, setNewArrival] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -421,12 +423,75 @@ const NewSection = () => {
                           <p className="text-lg font-black text-slate-900 mb-3">
                             ₹{price.toLocaleString()}
                           </p>
+                          {/* Specs badges */}
+                          <div className="flex flex-wrap gap-1.5 mb-3">
+                            {specs?.processor && (
+                              <span className="text-[10px] font-bold bg-slate-50 border border-slate-100 text-slate-600 px-2.5 py-1 rounded-lg flex items-center gap-1">
+                                <svg
+                                  className="w-3 h-3 text-slate-500"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.5"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M15.75 3v1.5m-7.5 15v1.5m7.5-1.5v1.5M8.25 18v-1.5m7.5 1.5v-1.5m-7.5-3h7.5M9 15h1.5m3 0H15m-4.5-3H15m-6-6h7.5A2.25 2.25 0 0118 8.25v7.5A2.25 2.25 0 0115.75 18H8.25A2.25 2.25 0 016 15.75v-7.5A2.25 2.25 0 018.25 6z"
+                                  />
+                                </svg>
+                                {specs.processor.split("(")[0].trim().replace("10-core CPU, 10-core GPU", "").trim()}
+                              </span>
+                            )}
+                            {specs?.ram && (
+                              <span className="text-[10px] font-bold bg-slate-50 border border-slate-100 text-slate-600 px-2.5 py-1 rounded-lg flex items-center gap-1">
+                                <svg
+                                  className="w-3 h-3 text-slate-500"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.5"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M6 20.25h12m-12-3h12m-12-3h12m-12-3h12m-12-3h12m-12-3h12"
+                                  />
+                                </svg>
+                                {getRamSize(specs.ram)}
+                              </span>
+                            )}
+                            {specs?.storage && (
+                              <span className="text-[10px] font-bold bg-slate-50 border border-slate-100 text-slate-600 px-2.5 py-1 rounded-lg flex items-center gap-1">
+                                <svg
+                                  className="w-3 h-3 text-slate-500"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.5"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75m16.5 0v3.75m-16.5-3.75v3.75"
+                                  />
+                                </svg>
+                                {getStorageSize(specs.storage)}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                            {description}
+                          </p>
                         </div>
-                        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                          {description}
-                        </p>
                         <div className="flex gap-3 mt-4 pt-3 border-t border-slate-50">
-                          <button className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all">
+                          <button
+                            onClick={() => addToCart(item)}
+                            className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all cursor-pointer"
+                          >
                             Add to Cart
                           </button>
                           <button className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs">
