@@ -1,7 +1,9 @@
 import React from "react";
 import "@fontsource/manrope";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="grid grid-cols-[40%_60%] mt-50  ">
       <section className="pl-8 mt-15 ">
@@ -21,10 +23,16 @@ const Home = () => {
         </p>
 
         <div className="flex gap-5 mt-10">
-          <button className="bg-slate-900 text-white px-8 py-3  font-medium hover:bg-slate-800 transition-all duration-300">
+          <button
+            onClick={() => navigate("/new")}
+            className="bg-slate-900 text-white px-8 py-3  font-medium hover:bg-slate-800 transition-all duration-300 cursor-pointer"
+          >
             Shop Now
           </button>
-          <button className="border-slate-300 border text-slate-900 px-8 py-3 font-medium hover:bg-slate-900 hover:text-white transition-all duration-300">
+          <button
+            onClick={() => navigate("/laptop")}
+            className="border-slate-300 border text-slate-900 px-8 py-3 font-medium hover:bg-slate-900 hover:text-white transition-all duration-300 cursor-pointer"
+          >
             Learn More
           </button>
         </div>

@@ -17,24 +17,29 @@ const Nav = () => {
         SHOPEASY
       </p>
 
-      <ul className="  ml-8 flex gap-7  list-none cursor-pointer  ">
+      <ul className="ml-8 flex gap-7 list-none cursor-pointer">
         <li
           onClick={() => navigate("/")}
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500"
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
         >
           Home
         </li>
         <Link
           to="/new"
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm  text-slate-500 font-['manrope'] "
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm text-slate-500 font-['manrope']"
         >
           new
         </Link>
-
-        <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
+        <li
+          onClick={() => navigate("/mobile")}
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
+        >
           Mobile
         </li>
-        <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium  text-sm font-['manrope'] text-slate-500">
+        <li
+          onClick={() => navigate("/tablet")}
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
+        >
           Tablet
         </li>
         <Link
@@ -43,7 +48,10 @@ const Nav = () => {
         >
           Laptop
         </Link>
-        <li className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500">
+        <li
+          onClick={() => navigate("/headphone")}
+          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
+        >
           Headphone
         </li>
       </ul>

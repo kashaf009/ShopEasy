@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewArrivalCard = ({ name, price, image, description, specs }) => {
+  const navigate = useNavigate();
   return (
     <div className="shadow-md  ">
       {/* {newArrivals.slice(1).map((items) => {})} */}
@@ -26,7 +28,10 @@ const NewArrivalCard = ({ name, price, image, description, specs }) => {
         </div>
       )}
       <div className="px-5 ">
-        <button className="bg-white w-full border-2 border-slate-900 text-slate-900 font-medium px-4 py-2 hover:bg-slate-800 hover:text-white transition-all">
+        <button
+          onClick={() => navigate("/new")}
+          className="bg-white w-full border-2 border-slate-900 text-slate-900 font-medium px-4 py-2 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
+        >
           Shop Now
         </button>
       </div>

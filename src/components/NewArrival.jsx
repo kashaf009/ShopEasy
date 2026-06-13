@@ -1,7 +1,9 @@
 import React from "react";
 import NewArrivalCard from "./NewArrivalCard";
+import { useNavigate } from "react-router-dom";
 
 const NewArrival = () => {
+  const navigate = useNavigate();
   const newArrivals = [
     {
       id: 1,
@@ -126,7 +128,10 @@ const NewArrival = () => {
             </p>
 
             <div className="px-7 ">
-              <button className="bg-white border-2 border-slate-900 w-full mt-5 mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300">
+              <button
+                onClick={() => navigate("/new")}
+                className="bg-white border-2 border-slate-900 w-full mt-5 mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-pointer"
+              >
                 Shop Now
               </button>
             </div>

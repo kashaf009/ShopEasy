@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const CollectionCard = ({ icon, title, description }) => {
+  const navigate = useNavigate();
   const handleClick = (title) => {
-    console.log(title);
+    navigate(`/${title.toLowerCase()}`);
   };
   return (
     <div className="group p-8 cursor-pointer bg-white rounded-xl mb-25 border-b-2 border-transparent hover:border-slate-900 transition-all duration-300">
