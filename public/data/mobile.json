@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "category": "mobile",
+    "name": "Apple iPhone 17",
+    "price": 89900,
+    "launched": "September 2026",
+    "specs": {
+      "processor": "Apple A20 Bionic",
+      "ram": "8GB",
+      "storage": "128GB",
+      "display": "6.1-inch Super Retina XDR OLED",
+      "battery": "Up to 22 hours video playback",
+      "os": "iOS 20"
+    },
+    "description": "Latest iPhone with powerful A20 chip, advanced AI features, improved cameras, and premium design.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2QFP4KU5gkicWhdErgW_BUT8JZ8wp3SoWQ&s"
+  },
+  {
+    "id": 2,
+    "category": "mobile",
+    "name": "Samsung Galaxy S26 Ultra",
+    "price": 129999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite Gen 2",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.9-inch Dynamic AMOLED 2X",
+      "battery": "5500mAh",
+      "os": "Android 16"
+    },
+    "description": "Flagship Samsung phone with S Pen support, 200MP camera, and premium performance.",
+    "image": "https://sm.pcmag.com/t/pcmag_me/review/s/samsung-ga/samsung-galaxy-s26-ultra_qepf.1920.jpg"
+  },
+  {
+    "id": 3,
+    "category": "mobile",
+    "name": "Google Pixel 11 Pro",
+    "price": 99999,
+    "launched": "October 2026",
+    "specs": {
+      "processor": "Google Tensor G6",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.7-inch LTPO OLED",
+      "battery": "5200mAh",
+      "os": "Android 16"
+    },
+    "description": "AI-powered Pixel phone with industry-leading computational photography.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghD9oTypmah_ACBLLc9qQG7QyhmUxQ6R5uw&s"
+  },
+  {
+    "id": 4,
+    "category": "mobile",
+    "name": "OnePlus 15",
+    "price": 69999,
+    "launched": "February 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.78-inch AMOLED 120Hz",
+      "battery": "6000mAh",
+      "os": "OxygenOS 16"
+    },
+    "description": "Fast and smooth flagship smartphone with excellent charging speeds.",
+    "image": "https://sm.pcmag.com/t/pcmag_me/news/o/oneplus-15/oneplus-15-will-launch-globally-heres-a-full-look-at-its-des_cdrf.1920.jpg"
+  },
+  {
+    "id": 5,
+    "category": "mobile",
+    "name": "Xiaomi 16 Pro",
+    "price": 74999,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite",
+      "ram": "12GB",
+      "storage": "512GB",
+      "display": "6.73-inch AMOLED 120Hz",
+      "battery": "5500mAh",
+      "os": "HyperOS 3"
+    },
+    "description": "Premium Xiaomi flagship with Leica cameras and powerful hardware.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYJNYCF2akn-OSKNz14jcc2UjPOecH87ebw&s"
+  },
+  {
+    "id": 6,
+    "category": "mobile",
+    "name": "Nothing Phone (4)",
+    "price": 49999,
+    "launched": "July 2026",
+    "specs": {
+      "processor": "Snapdragon 8s Gen 5",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.7-inch OLED 120Hz",
+      "battery": "5000mAh",
+      "os": "Nothing OS 4"
+    },
+    "description": "Unique transparent design with Glyph Interface and clean Android experience.",
+    "image": "https://cdn.sanity.io/images/gtd4w1cq/production/c4f8412c90aa13e1873d41121df3f3a666adda9f-4096x2305.jpg?auto=format"
+  },
+  {
+    "id": 7,
+    "category": "mobile",
+    "name": "Samsung Galaxy A58",
+    "price": 34999,
+    "launched": "March 2026",
+    "specs": {
+      "processor": "Exynos 1680",
+      "ram": "8GB",
+      "storage": "128GB",
+      "display": "6.6-inch Super AMOLED 120Hz",
+      "battery": "5000mAh",
+      "os": "Android 16"
+    },
+    "description": "Reliable mid-range smartphone with long software support.",
+    "image": "https://i.ytimg.com/vi/bgfX1KtVx-U/maxresdefault.jpg"
+  },
+  {
+    "id": 8,
+    "category": "mobile",
+    "name": "Realme GT 8 Pro",
+    "price": 44999,
+    "launched": "November 2026",
+    "specs": {
+      "processor": "Snapdragon 8s Gen 5",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.78-inch AMOLED 144Hz",
+      "battery": "5800mAh",
+      "os": "Realme UI 7"
+    },
+    "description": "Performance-focused smartphone for gamers and power users.",
+    "image": "https://i.ytimg.com/vi/wCi3gb4mRqk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBz7RBHdcJo7AKhJxpXRuhVqfgT7Q"
+  },
+  {
+    "id": 9,
+    "category": "mobile",
+    "name": "iQOO 15 Pro",
+    "price": 59999,
+    "launched": "August 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite",
+      "ram": "16GB",
+      "storage": "512GB",
+      "display": "6.8-inch AMOLED 144Hz",
+      "battery": "6200mAh",
+      "os": "Funtouch OS 16"
+    },
+    "description": "Gaming-centric flagship with ultra-fast charging and cooling system.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGojniSke4H6eIW9HykeuuQIqkqd4RbpwgcQ&s"
+  },
+  {
+    "id": 10,
+    "category": "mobile",
+    "name": "Vivo X300 Pro",
+    "price": 89999,
+    "launched": "September 2026",
+    "specs": {
+      "processor": "MediaTek Dimensity 9600",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.78-inch LTPO AMOLED",
+      "battery": "5500mAh",
+      "os": "OriginOS 6"
+    },
+    "description": "Camera-focused flagship with ZEISS optics and premium design.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUEiUJ3tg121cZSPL3rhisp8O7QDt7K19XnA&s"
+  },
+  {
+    "id": 11,
+    "category": "mobile",
+    "name": "Oppo Find X9 Pro",
+    "price": 94999,
+    "launched": "December 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite",
+      "ram": "16GB",
+      "storage": "512GB",
+      "display": "6.82-inch AMOLED 120Hz",
+      "battery": "5600mAh",
+      "os": "ColorOS 16"
+    },
+    "description": "Luxury flagship smartphone with top-tier cameras and performance.",
+    "image": "https://www.oppo.com/content/dam/oppo_com/en/mkt/newsroom/press/2025/10/oppo-find-x9-global-launch-redefines-premium-smartphone-experience/header-v1.webp"
+  },
+  {
+    "id": 12,
+    "category": "mobile",
+    "name": "Motorola Edge 70 Ultra",
+    "price": 54999,
+    "launched": "May 2026",
+    "specs": {
+      "processor": "Snapdragon 8s Gen 5",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.7-inch pOLED 144Hz",
+      "battery": "5000mAh",
+      "os": "Android 16"
+    },
+    "description": "Near-stock Android experience with premium hardware and cameras.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtKlLlrrSvG0loHEiiHmKKshbiW3_AeX0otQ&s"
+  },
+  {
+    "id": 13,
+    "category": "mobile",
+    "name": "Redmi Note 16 Pro+",
+    "price": 32999,
+    "launched": "January 2026",
+    "specs": {
+      "processor": "MediaTek Dimensity 8500",
+      "ram": "8GB",
+      "storage": "256GB",
+      "display": "6.67-inch AMOLED 120Hz",
+      "battery": "5100mAh",
+      "os": "HyperOS 3"
+    },
+    "description": "Value-for-money smartphone with strong performance and fast charging.",
+    "image": "https://i.ytimg.com/vi/_vC1-wm1VAw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmlHlvuDQVmbSsmuJwCG1iTTvClA"
+  },
+  {
+    "id": 14,
+    "category": "mobile",
+    "name": "Poco F8 Pro",
+    "price": 39999,
+    "launched": "April 2026",
+    "specs": {
+      "processor": "Snapdragon 8s Gen 5",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": "6.67-inch AMOLED 120Hz",
+      "battery": "5500mAh",
+      "os": "HyperOS 3"
+    },
+    "description": "Flagship killer with excellent gaming performance at an affordable price.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRld--j4wVtfRkVJw2rvw2kbN6G_SxSzL9ZeQ&s"
+  },
+  {
+    "id": 15,
+    "category": "mobile",
+    "name": "Asus ROG Phone 10",
+    "price": 109999,
+    "launched": "June 2026",
+    "specs": {
+      "processor": "Snapdragon 8 Elite",
+      "ram": "16GB",
+      "storage": "512GB",
+      "display": "6.8-inch AMOLED 165Hz",
+      "battery": "6500mAh",
+      "os": "Android 16"
+    },
+    "description": "Ultimate gaming smartphone with advanced cooling and gaming accessories support.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQxJyMjh5eyAFSYxN-q0Yj5FSXG4hYaqSNig&s"
+  }
+]

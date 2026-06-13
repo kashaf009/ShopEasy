@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "@fontsource/manrope";
 import axios from "axios";
-import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Mobile = () => {
-  const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [mobiles, setMobiles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -52,7 +52,8 @@ const Mobile = () => {
             return (
               <div
                 key={id}
-                className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px]"
+                onClick={() => navigate(`/mobile/${id}`)}
+                className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px] cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-50">
