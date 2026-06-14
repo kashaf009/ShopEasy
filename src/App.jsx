@@ -7,6 +7,7 @@ import Laptop from "./components/Laptop";
 import Mobile from "./components/Mobile";
 import Tablet from "./components/Tablet";
 import Headphone from "./components/Headphone";
+import ProductDetail from "./components/ProductDetail";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/mobile" element={<Mobile />} />
           <Route path="/tablet" element={<Tablet />} />
           <Route path="/headphone" element={<Headphone />} />
+          <Route path="/product/:source/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </div>
