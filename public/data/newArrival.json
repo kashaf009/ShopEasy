@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "new_1",
     "category": "laptop",
     "name": "Apple MacBook Air M5 (13-inch)",
     "price": 114900,
@@ -17,7 +17,7 @@
     "image": "https://www.macworld.com/wp-content/uploads/2026/03/MacBook-Air.jpg?quality=50&strip=all&w=1024"
   },
   {
-    "id": 2,
+    "id": "new_2",
     "category": "laptop",
     "name": "Dell XPS 14 (2026)",
     "price": 139999,
@@ -34,7 +34,7 @@
     "image": "https://i.pcmag.com/imagery/articles/01rSDv7tr5B90bVop0yIQzk-12..v1766421652.jpg"
   },
   {
-    "id": 3,
+    "id": "new_3",
     "category": "tablet",
     "name": "Apple iPad Air 11-inch (M4, 2026)",
     "price": 74900,
@@ -51,7 +51,7 @@
     "image": "https://www.apple.com/v/ipad-air/ag/images/meta/ipad-air_overview__bc2fd15uec0y_og.png?202603160105"
   },
   {
-    "id": 4,
+    "id": "new_4",
     "category": "tablet",
     "name": "Samsung Galaxy Tab S11 Ultra",
     "price": 129999,
@@ -68,7 +68,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQk-8J9Y3r_Z9Sm0RYz6rU2pfYTVPMWBaWg&s"
   },
   {
-    "id": 5,
+    "id": "new_5",
     "category": "headphones",
     "name": "Sony WH-1000XM6",
     "price": 34999,
@@ -86,7 +86,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi0ONHP2vg2bq-PxKbADp3Ahxsxhv-5YB3sg&s"
   },
   {
-    "id": 6,
+    "id": "new_6",
     "category": "smartphone",
     "name": "iPhone 16 Pro Max",
     "price": 159900,
@@ -101,7 +101,7 @@
     "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/tile/Apple-iPhone-16-Pro-hero-geo-240909-lp.jpg.landing-big_2x.jpg"
   },
   {
-    "id": 7,
+    "id": "new_7",
     "category": "smartphone",
     "name": "Samsung Galaxy S25 Ultra",
     "price": 149999,
@@ -116,7 +116,7 @@
     "image": "https://static0.howtogeekimages.com/wordpress/wp-content/uploads/2025/01/samsung-galaxy-s25-ultra-1.jpg"
   },
   {
-    "id": 8,
+    "id": "new_8",
     "category": "smartwatch",
     "name": "Apple Watch Series 11",
     "price": 45900,
@@ -129,7 +129,7 @@
     "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s11-case-unselect-gallery-1-202509_GEO_EMEA_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=WldDSmZlQ1ladGVha0lMWUJJK2M4ZHlVRllKam5abHNZRGludXlMbytKNFo2cm95TEtVUGNBN3pWWWMxUmxKSFh2WnVKTjEySjVmY2ZteE1GdEFoNWM2c3NSYUM4YjA0RTQxLytvRzE4M0QrWGp4amFCSTJ1K1hKMXRsMkNUYlhaOWRBWGt2OWI4clNTdjYwdnkxK0RR"
   },
   {
-    "id": 9,
+    "id": "new_9",
     "category": "smartwatch",
     "name": "Samsung Galaxy Watch 7",
     "price": 29999,
@@ -142,7 +142,7 @@
     "image": "https://i.ytimg.com/vi/drMpzGxgwQE/maxresdefault.jpg"
   },
   {
-    "id": 10,
+    "id": "new_10",
     "category": "earbuds",
     "name": "Apple AirPods Pro (3rd Gen)",
     "price": 26900,
@@ -156,7 +156,7 @@
     "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-hero-select-202509_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1758077264181"
   },
   {
-    "id": 11,
+    "id": "new_11",
     "category": "earbuds",
     "name": "Samsung Galaxy Buds 3 Pro",
     "price": 18999,
@@ -169,7 +169,7 @@
     "image": "https://image-us.samsung.com/SamsungUS/home/mobile-audio/galaxy-buds3-pro/images/SDSAC-9252-Buds3_Pro_ProductKV_2P_CES_Logo_RGB-800X600.jpg?$product-details-jpg$"
   },
   {
-    "id": 12,
+    "id": "new_12",
     "category": "monitor",
     "name": "LG UltraGear 27 OLED",
     "price": 79999,
@@ -182,7 +182,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRflcG7LR483vtOmvqzNZayiqwJx8bhlEA4nQ&s"
   },
   {
-    "id": 13,
+    "id": "new_13",
     "category": "monitor",
     "name": "Samsung Odyssey Neo G8",
     "price": 99999,
@@ -195,7 +195,7 @@
     "image": "https://www.pcguide.com/wp-content/uploads/2024/06/SAMSUNG-32-Odyssey-Neo-G8-4K-UHD-240Hz-1ms-G-Sync-1000R-Curved-Gaming-Monitor-Quantum-HDR2000-AMD-FreeSync-Premium-Pro-Matte-Display-Ultrawide-Game-View-DisplayPort-Black-White-2022.jpg"
   },
   {
-    "id": 14,
+    "id": "new_14",
     "category": "keyboard",
     "name": "Keychron K8 Pro",
     "price": 8999,
@@ -208,7 +208,7 @@
     "image": "https://cdn.mos.cms.futurecdn.net/sgCRFXKjw5hmxTEp87YMB5.jpg"
   },
   {
-    "id": 15,
+    "id": "new_15",
     "category": "mouse",
     "name": "Logitech MX Master 4",
     "price": 9999,
@@ -221,7 +221,7 @@
     "image": "https://mdcomputers.in/image/catalog/mouse/logitech/910-007565/910-007565-image-main.webp"
   },
   {
-    "id": 16,
+    "id": "new_16",
     "category": "camera",
     "name": "Sony Alpha A7 IV",
     "price": 199999,
@@ -234,7 +234,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiRCqsZ4ADWbcSDEHe3qEyZhNZTsXAm9h-A&s"
   },
   {
-    "id": 17,
+    "id": "new_17",
     "category": "camera",
     "name": "Canon EOS R6 Mark II",
     "price": 189999,
@@ -247,7 +247,7 @@
     "image": "https://4.img-dpreview.com/files/p/E~TS940x788~articles/7539266175/Canon-EOS-R6-II-images/Canon_EOS_R6_II_sensor.jpeg"
   },
   {
-    "id": 18,
+    "id": "new_18",
     "category": "speaker",
     "name": "JBL Charge 6",
     "price": 17999,
@@ -260,7 +260,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-wtYl1fEOy0qyrMPpIYdmjFQ_l_LlSZsk-g&s"
   },
   {
-    "id": 19,
+    "id": "new_19",
     "category": "console",
     "name": "Sony PlayStation 5 Slim",
     "price": 54999,
@@ -273,7 +273,7 @@
     "image": "https://www.designinfo.in/wp-content/uploads/2024/09/sony-ps5-slim-disc-edition-5.webp"
   },
   {
-    "id": 20,
+    "id": "new_20",
     "category": "console",
     "name": "Xbox Series X",
     "price": 55999,

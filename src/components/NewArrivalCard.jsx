@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const NewArrivalCard = ({ name, price, image, description, specs }) => {
+const NewArrivalCard = ({ id, category, name, price, image, description, specs }) => {
   const navigate = useNavigate();
   return (
     <div className="shadow-md  ">
@@ -29,7 +29,7 @@ const NewArrivalCard = ({ name, price, image, description, specs }) => {
       )}
       <div className="px-5 ">
         <button
-          onClick={() => navigate("/new")}
+          onClick={() => navigate(`/product/${category || 'new'}/${id}`)}
           className="bg-white w-full border-2 border-slate-900 text-slate-900 font-medium px-4 py-2 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
         >
           Shop Now

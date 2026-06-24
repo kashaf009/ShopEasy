@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 // Helper functions (copied from Laptop.jsx)
 const getRamSize = (ramStr) => {
@@ -55,7 +56,7 @@ const NewSection = () => {
   useEffect(() => {
     const fetchNewArrival = async () => {
       try {
-        const res = await axios.get("./data/newArrival.json");
+        const res = await axios.get("/data/newArrival.json");
         setNewArrival(res.data);
         setLoading(false);
       } catch (err) {
@@ -401,7 +402,7 @@ const NewSection = () => {
                       key={id}
                       className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px]"
                     >
-                      <div className="relative aspect-video w-full overflow-hidden bg-slate-50">
+                      <Link to={`/product/${item.category || 'new'}/${id}`} className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
                         <img
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           src={image}
@@ -411,15 +412,17 @@ const NewSection = () => {
                         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs font-bold text-xs text-slate-800 px-3 py-1 rounded-full shadow-xs">
                           {name.split(" ")[0]}
                         </div>
-                      </div>
+                      </Link>
                       <div className="p-5 flex-1 flex flex-col justify-between">
                         <div>
-                          <h4
-                            className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1"
-                            title={name}
-                          >
-                            {name}
-                          </h4>
+                          <Link to={`/product/${item.category || 'new'}/${id}`}>
+                            <h4
+                              className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1"
+                              title={name}
+                            >
+                              {name}
+                            </h4>
+                          </Link>
                           <p className="text-lg font-black text-slate-900 mb-3">
                             ₹{price.toLocaleString()}
                           </p>

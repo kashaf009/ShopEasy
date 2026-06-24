@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "lap_1",
     "category": "laptop",
     "name": "Apple MacBook Air M5 (13-inch)",
     "price": 114900,
@@ -17,7 +17,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoTOhYTfq7z0GTK4_ho7LCwm4O8XqONCgWdA&s"
   },
   {
-    "id": 2,
+    "id": "lap_2",
     "category": "laptop",
     "name": "Dell XPS 13 Plus",
     "price": 129999,
@@ -34,7 +34,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgacukSXcE-iOQsZtaanXOPBV1YsyUEse5Q&s"
   },
   {
-    "id": 3,
+    "id": "lap_3",
     "category": "laptop",
     "name": "HP Spectre x360 14",
     "price": 119999,
@@ -51,7 +51,7 @@
     "image": "https://media.wired.com/photos/6609e9d8ae856456d50d16c2/master/pass/HP-Spectre-x360-front-Abstract-Background-SOURCE-HP.jpg"
   },
   {
-    "id": 4,
+    "id": "lap_4",
     "category": "laptop",
     "name": "Lenovo Yoga Slim 7i",
     "price": 99999,
@@ -68,7 +68,7 @@
     "image": "https://media.wired.com/photos/670839498130ea3440fa5cee/master/w_1600%2Cc_limit/Lenovo-Yoga-Slim-7i-Aura-Edition-(Copilot+-PC)-Front-Open-Reviewer-Photos-SOURCE-Julian-Chokkattu.jpg"
   },
   {
-    "id": 5,
+    "id": "lap_5",
     "category": "laptop",
     "name": "Asus ROG Zephyrus G14",
     "price": 149999,
@@ -85,7 +85,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CIHpdolfpg7lhpD3VKa2k752h5dIbqZi_g&s"
   },
   {
-    "id": 6,
+    "id": "lap_6",
     "category": "laptop",
     "name": "Acer Swift X",
     "price": 89999,
@@ -102,7 +102,7 @@
     "image": "https://i.pcmag.com/imagery/reviews/02mELIW1WYVTyEQyapNxUFw-1..v1704307627.jpg"
   },
   {
-    "id": 7,
+    "id": "lap_7",
     "category": "laptop",
     "name": "MSI Stealth 16 Studio",
     "price": 179999,
@@ -119,7 +119,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQsxHUb58m8U_qG5hoc4LShRcSfR9eBoLnKg&s"
   },
   {
-    "id": 8,
+    "id": "lap_8",
     "category": "laptop",
     "name": "Samsung Galaxy Book4 Pro",
     "price": 139999,
@@ -136,7 +136,7 @@
     "image": "https://www.barcodegiant.com/media/catalog/product/cache/4/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/1/e/f/9/1ef904d4b51f8d9bc8b0a07fdef5e1ccdaed59c7_galaxy_book4_pro_1.jpg"
   },
   {
-    "id": 9,
+    "id": "lap_9",
     "category": "laptop",
     "name": "Microsoft Surface Laptop 6",
     "price": 124999,
@@ -153,7 +153,7 @@
     "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Carousel-Surface-Laptop-6-002?scl=1"
   },
   {
-    "id": 10,
+    "id": "lap_10",
     "category": "laptop",
     "name": "Lenovo Legion 5 Pro",
     "price": 159999,
@@ -170,7 +170,7 @@
     "image": "https://p4-ofp.static.pub//fes/cms/2024/09/19/9mi4xh3z07ddp4jhxwyadcf0mkl15v972949.png"
   },
   {
-    "id": 11,
+    "id": "lap_11",
     "category": "laptop",
     "name": "HP Pavilion Plus 14",
     "price": 79999,
@@ -187,7 +187,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCk-Invra8YzRnmevbEXxxwKCJChWKdTh-0g&s"
   },
   {
-    "id": 12,
+    "id": "lap_12",
     "category": "laptop",
     "name": "Asus ZenBook 14 OLED",
     "price": 109999,
@@ -204,7 +204,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIegdPLRyf86wA4qDVyDp4pOLWeEnbYBWCdg&s"
   },
   {
-    "id": 13,
+    "id": "lap_13",
     "category": "laptop",
     "name": "Acer Nitro 5",
     "price": 94999,
@@ -221,7 +221,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegLqPEB9D6T3iuXRPvIVe-pXnWvTURceo4Q&s"
   },
   {
-    "id": 14,
+    "id": "lap_14",
     "category": "laptop",
     "name": "Dell Inspiron 14",
     "price": 69999,
@@ -238,7 +238,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD58i5sKVvmxHhIQGA7jewkgXXPzbbdtrCkA&s"
   },
   {
-    "id": 15,
+    "id": "lap_15",
     "category": "laptop",
     "name": "Apple MacBook Pro M5 (16-inch)",
     "price": 239900,
@@ -255,7 +255,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAKnIFpqKtZvnOa3VN0lEDq8qSa8UmpJ7YA&s"
   },
   {
-    "id": 16,
+    "id": "lap_16",
     "category": "laptop",
     "name": "Razer Blade 15",
     "price": 199999,
@@ -272,7 +272,7 @@
     "image": "https://assets2.razerzone.com/images/pnx.assets/344f716dfd82e35fee3c86f4354240c3/razer-blade-15-fhd-carousel-768x500-mobile.webp"
   },
   {
-    "id": 17,
+    "id": "lap_17",
     "category": "laptop",
     "name": "LG Gram 16",
     "price": 134999,
@@ -289,7 +289,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpSWOyp6n0oZQ1m1JKE-rlm-d5vz7lBRDKQ&s"
   },
   {
-    "id": 18,
+    "id": "lap_18",
     "category": "laptop",
     "name": "HP Omen 16",
     "price": 139999,
@@ -306,7 +306,7 @@
     "image": "https://sm.pcmag.com/pcmag_me/review/h/hp-omen-16/hp-omen-16-2023-13th-gen-core_87uc.jpg"
   },
   {
-    "id": 19,
+    "id": "lap_19",
     "category": "laptop",
     "name": "Asus Vivobook 15",
     "price": 59999,
@@ -323,7 +323,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8J-4X6_lqNd8zJUgUQTtljXBj1arm7cigw&s"
   },
   {
-    "id": 20,
+    "id": "lap_20",
     "category": "laptop",
     "name": "Lenovo IdeaPad Slim 5",
     "price": 74999,

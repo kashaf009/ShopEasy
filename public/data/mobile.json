@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "mob_1",
     "category": "mobile",
     "name": "Apple iPhone 17",
     "price": 89900,
@@ -17,7 +17,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2QFP4KU5gkicWhdErgW_BUT8JZ8wp3SoWQ&s"
   },
   {
-    "id": 2,
+    "id": "mob_2",
     "category": "mobile",
     "name": "Samsung Galaxy S26 Ultra",
     "price": 129999,
@@ -34,7 +34,7 @@
     "image": "https://sm.pcmag.com/t/pcmag_me/review/s/samsung-ga/samsung-galaxy-s26-ultra_qepf.1920.jpg"
   },
   {
-    "id": 3,
+    "id": "mob_3",
     "category": "mobile",
     "name": "Google Pixel 11 Pro",
     "price": 99999,
@@ -51,7 +51,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghD9oTypmah_ACBLLc9qQG7QyhmUxQ6R5uw&s"
   },
   {
-    "id": 4,
+    "id": "mob_4",
     "category": "mobile",
     "name": "OnePlus 15",
     "price": 69999,
@@ -68,7 +68,7 @@
     "image": "https://sm.pcmag.com/t/pcmag_me/news/o/oneplus-15/oneplus-15-will-launch-globally-heres-a-full-look-at-its-des_cdrf.1920.jpg"
   },
   {
-    "id": 5,
+    "id": "mob_5",
     "category": "mobile",
     "name": "Xiaomi 16 Pro",
     "price": 74999,
@@ -85,7 +85,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYJNYCF2akn-OSKNz14jcc2UjPOecH87ebw&s"
   },
   {
-    "id": 6,
+    "id": "mob_6",
     "category": "mobile",
     "name": "Nothing Phone (4)",
     "price": 49999,
@@ -102,7 +102,7 @@
     "image": "https://cdn.sanity.io/images/gtd4w1cq/production/c4f8412c90aa13e1873d41121df3f3a666adda9f-4096x2305.jpg?auto=format"
   },
   {
-    "id": 7,
+    "id": "mob_7",
     "category": "mobile",
     "name": "Samsung Galaxy A58",
     "price": 34999,
@@ -119,7 +119,7 @@
     "image": "https://i.ytimg.com/vi/bgfX1KtVx-U/maxresdefault.jpg"
   },
   {
-    "id": 8,
+    "id": "mob_8",
     "category": "mobile",
     "name": "Realme GT 8 Pro",
     "price": 44999,
@@ -136,7 +136,7 @@
     "image": "https://i.ytimg.com/vi/wCi3gb4mRqk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBz7RBHdcJo7AKhJxpXRuhVqfgT7Q"
   },
   {
-    "id": 9,
+    "id": "mob_9",
     "category": "mobile",
     "name": "iQOO 15 Pro",
     "price": 59999,
@@ -153,7 +153,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGojniSke4H6eIW9HykeuuQIqkqd4RbpwgcQ&s"
   },
   {
-    "id": 10,
+    "id": "mob_10",
     "category": "mobile",
     "name": "Vivo X300 Pro",
     "price": 89999,
@@ -170,7 +170,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUEiUJ3tg121cZSPL3rhisp8O7QDt7K19XnA&s"
   },
   {
-    "id": 11,
+    "id": "mob_11",
     "category": "mobile",
     "name": "Oppo Find X9 Pro",
     "price": 94999,
@@ -187,7 +187,7 @@
     "image": "https://www.oppo.com/content/dam/oppo_com/en/mkt/newsroom/press/2025/10/oppo-find-x9-global-launch-redefines-premium-smartphone-experience/header-v1.webp"
   },
   {
-    "id": 12,
+    "id": "mob_12",
     "category": "mobile",
     "name": "Motorola Edge 70 Ultra",
     "price": 54999,
@@ -204,7 +204,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtKlLlrrSvG0loHEiiHmKKshbiW3_AeX0otQ&s"
   },
   {
-    "id": 13,
+    "id": "mob_13",
     "category": "mobile",
     "name": "Redmi Note 16 Pro+",
     "price": 32999,
@@ -221,7 +221,7 @@
     "image": "https://i.ytimg.com/vi/_vC1-wm1VAw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmlHlvuDQVmbSsmuJwCG1iTTvClA"
   },
   {
-    "id": 14,
+    "id": "mob_14",
     "category": "mobile",
     "name": "Poco F8 Pro",
     "price": 39999,
@@ -238,7 +238,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRld--j4wVtfRkVJw2rvw2kbN6G_SxSzL9ZeQ&s"
   },
   {
-    "id": 15,
+    "id": "mob_15",
     "category": "mobile",
     "name": "Asus ROG Phone 10",
     "price": 109999,

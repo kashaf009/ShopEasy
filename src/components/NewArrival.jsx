@@ -6,7 +6,7 @@ const NewArrival = () => {
   const navigate = useNavigate();
   const newArrivals = [
     {
-      id: 1,
+      id: "new_1",
       category: "laptop",
       name: "Apple MacBook Air M5 (13-inch)",
       price: 114900,
@@ -25,7 +25,7 @@ const NewArrival = () => {
         "https://www.macworld.com/wp-content/uploads/2026/03/MacBook-Air.jpg?quality=50&strip=all&w=1024",
     },
     {
-      id: 2,
+      id: "new_2",
       category: "laptop",
       name: "Dell XPS 14 (2026)",
       price: 139999,
@@ -44,7 +44,7 @@ const NewArrival = () => {
         "https://i.pcmag.com/imagery/articles/01rSDv7tr5B90bVop0yIQzk-12..v1766421652.jpg",
     },
     {
-      id: 3,
+      id: "new_3",
       category: "tablet",
       name: "Apple iPad Air 11-inch (M4, 2026)",
       price: 74900,
@@ -63,7 +63,7 @@ const NewArrival = () => {
         "https://www.apple.com/v/ipad-air/ag/images/meta/ipad-air_overview__bc2fd15uec0y_og.png?202603160105",
     },
     {
-      id: 4,
+      id: "new_4",
       category: "tablet",
       name: "Samsung Galaxy Tab S11 Ultra",
       price: 129999,
@@ -82,7 +82,7 @@ const NewArrival = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQk-8J9Y3r_Z9Sm0RYz6rU2pfYTVPMWBaWg&s",
     },
     {
-      id: 5,
+      id: "new_5",
       category: "headphones",
       name: "Sony WH-1000XM6",
       price: 34999,
@@ -129,7 +129,7 @@ const NewArrival = () => {
 
             <div className="px-7 ">
               <button
-                onClick={() => navigate("/new")}
+                onClick={() => navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`)}
                 className="bg-white border-2 border-slate-900 w-full mt-5 mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-pointer"
               >
                 Shop Now
@@ -143,6 +143,8 @@ const NewArrival = () => {
           {newArrivals.slice(1).map((items) => (
             <NewArrivalCard
               key={items.id}
+              id={items.id}
+              category={items.category}
               image={items.image}
               name={items.name}
               price={items.price}

@@ -26,14 +26,24 @@ const Nav = () => {
           axios.get("./data/newArrival.json"),
         ]);
 
-        const mobiles = mobileRes.data.map((item) => ({ ...item, source: "mobile" }));
-        const laptops = laptopRes.data.map((item) => ({ ...item, source: "laptop" }));
-        const newArrivals = newArrivalRes.data.map((item) => ({ ...item, source: "new" }));
+        const mobiles = mobileRes.data.map((item) => ({
+          ...item,
+          source: "mobile",
+        }));
+        const laptops = laptopRes.data.map((item) => ({
+          ...item,
+          source: "laptop",
+        }));
+        const newArrivals = newArrivalRes.data.map((item) => ({
+          ...item,
+          source: "new",
+        }));
 
         // Combine and deduplicate by name
         const combined = [...mobiles, ...laptops, ...newArrivals];
         const unique = combined.filter(
-          (item, index, self) => index === self.findIndex((t) => t.name === item.name)
+          (item, index, self) =>
+            index === self.findIndex((t) => t.name === item.name),
         );
         setAllProducts(unique);
       } catch (err) {
@@ -57,7 +67,7 @@ const Nav = () => {
         item.name.toLowerCase().includes(query) ||
         item.category?.toLowerCase().includes(query) ||
         item.description?.toLowerCase().includes(query) ||
-        item.specs?.processor?.toLowerCase().includes(query)
+        item.specs?.processor?.toLowerCase().includes(query),
     );
     setSearchResults(results.slice(0, 8)); // Limit to 8 results
     setIsSearchOpen(true);
@@ -93,19 +103,27 @@ const Nav = () => {
   // Category label helper
   const getCategoryLabel = (source) => {
     switch (source) {
-      case "mobile": return "Mobile";
-      case "laptop": return "Laptop";
-      case "new": return "New Arrival";
-      default: return source;
+      case "mobile":
+        return "Mobile";
+      case "laptop":
+        return "Laptop";
+      case "new":
+        return "New Arrival";
+      default:
+        return source;
     }
   };
 
   const getCategoryColor = (source) => {
     switch (source) {
-      case "mobile": return "bg-blue-50 text-blue-700 border-blue-100";
-      case "laptop": return "bg-emerald-50 text-emerald-700 border-emerald-100";
-      case "new": return "bg-amber-50 text-amber-700 border-amber-100";
-      default: return "bg-slate-50 text-slate-700 border-slate-100";
+      case "mobile":
+        return "bg-blue-50 text-blue-700 border-blue-100";
+      case "laptop":
+        return "bg-emerald-50 text-emerald-700 border-emerald-100";
+      case "new":
+        return "bg-amber-50 text-amber-700 border-amber-100";
+      default:
+        return "bg-slate-50 text-slate-700 border-slate-100";
     }
   };
 
@@ -138,12 +156,7 @@ const Nav = () => {
         >
           Mobile
         </li>
-        <li
-          onClick={() => navigate("/tablet")}
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
-        >
-          Tablet
-        </li>
+
         <Link
           to="/laptop"
           className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500"
@@ -203,8 +216,18 @@ const Nav = () => {
                 }}
                 className="flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             )}
@@ -253,7 +276,7 @@ const Nav = () => {
                           </span>
                           <span
                             className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${getCategoryColor(
-                              product.source
+                              product.source,
                             )}`}
                           >
                             {getCategoryLabel(product.source)}
@@ -269,7 +292,11 @@ const Nav = () => {
                         strokeWidth="2.5"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                        />
                       </svg>
                     </button>
                   ))}
@@ -277,12 +304,26 @@ const Nav = () => {
               ) : (
                 <div className="px-4 py-8 flex flex-col items-center text-center">
                   <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-3">
-                    <svg className="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    <svg
+                      className="w-6 h-6 text-slate-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                      />
                     </svg>
                   </div>
-                  <p className="text-sm font-bold text-slate-700 mb-1">No products found</p>
-                  <p className="text-xs text-slate-400">Try a different keyword or check the spelling</p>
+                  <p className="text-sm font-bold text-slate-700 mb-1">
+                    No products found
+                  </p>
+                  <p className="text-xs text-slate-400">
+                    Try a different keyword or check the spelling
+                  </p>
                 </div>
               )}
             </div>

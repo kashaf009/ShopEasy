@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "@fontsource/manrope";
 import axios from "axios";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const Mobile = () => {
   const { addToCart } = useCart();
@@ -20,7 +21,7 @@ const Mobile = () => {
   useEffect(() => {
     const fetchMobile = async () => {
       try {
-        const res = await axios("./data/mobile.json");
+        const res = await axios("/data/mobile.json");
         const filtered = res.data.filter((item) => item.category === "mobile");
         setMobileData(filtered);
         setLoading(false);
@@ -415,7 +416,7 @@ const Mobile = () => {
                       className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px]"
                     >
                       {/* Image container */}
-                      <div className="relative aspect-video w-full overflow-hidden bg-slate-50">
+                      <Link to={`/product/${items.category || 'mobile'}/${id}`} className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
                         <img
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           src={image}
@@ -425,15 +426,17 @@ const Mobile = () => {
                         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs font-bold text-xs text-slate-800 px-3 py-1 rounded-full shadow-xs">
                           {name.split(" ")[0]}
                         </div>
-                      </div>
+                      </Link>
 
                       {/* Content */}
                       <div className="p-5 flex-1 flex flex-col justify-between">
                         <div>
                           {/* Title */}
-                          <h4 className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1" title={name}>
-                            {name}
-                          </h4>
+                          <Link to={`/product/${items.category || 'mobile'}/${id}`}>
+                            <h4 className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1" title={name}>
+                              {name}
+                            </h4>
+                          </Link>
 
                           {/* Price */}
                           <p className="text-lg font-black text-slate-900 mb-3">
