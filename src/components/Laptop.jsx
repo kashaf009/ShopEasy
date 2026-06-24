@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "@fontsource/manrope";
 import axios from "axios";
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Laptop = () => {
   const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [laptopData, setLaptopData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -412,7 +413,8 @@ const Laptop = () => {
                   return (
                     <div
                       key={id}
-                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px]"
+                      onClick={() => navigate(`/product/${items.category || 'laptop'}/${id}`)}
+                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px] cursor-pointer"
                     >
                       {/* Image container */}
                       <Link to={`/product/${items.category || 'laptop'}/${id}`} className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
@@ -479,12 +481,23 @@ const Laptop = () => {
                         {/* Actions */}
                         <div className="flex gap-3 mt-4 pt-3 border-t border-slate-50">
                           <button
-                            onClick={() => addToCart(items)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(items);
+                            }}
                             className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all cursor-pointer"
                           >
                             Add to Cart
                           </button>
-                          <button className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs cursor-pointer">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(items);
+                            }}
+                            className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs cursor-pointer"
+                          >
                             Buy Now
                           </button>
                         </div>

@@ -14,6 +14,7 @@ const ProductDetail = () => {
   const [addedToCart, setAddedToCart] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchProduct = async () => {
       try {
         const [mobileRes, laptopRes, newArrivalRes] = await Promise.all([

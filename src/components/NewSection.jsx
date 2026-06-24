@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Helper functions (copied from Laptop.jsx)
 const getRamSize = (ramStr) => {
@@ -41,6 +41,7 @@ const getProcessorCategory = (procStr) => {
 
 const NewSection = () => {
   const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [newArrival, setNewArrival] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -400,9 +401,10 @@ const NewSection = () => {
                   return (
                     <div
                       key={id}
-                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px]"
+                      onClick={() => navigate(`/product/${item.category || 'new'}/${id}`)}
+                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px] cursor-pointer"
                     >
-                      <Link to={`/product/${item.category || 'new'}/${id}`} className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
+                      <div className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
                         <img
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           src={image}
@@ -412,17 +414,15 @@ const NewSection = () => {
                         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs font-bold text-xs text-slate-800 px-3 py-1 rounded-full shadow-xs">
                           {name.split(" ")[0]}
                         </div>
-                      </Link>
+                      </div>
                       <div className="p-5 flex-1 flex flex-col justify-between">
                         <div>
-                          <Link to={`/product/${item.category || 'new'}/${id}`}>
                             <h4
                               className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1"
                               title={name}
                             >
                               {name}
                             </h4>
-                          </Link>
                           <p className="text-lg font-black text-slate-900 mb-3">
                             ₹{price.toLocaleString()}
                           </p>
@@ -492,12 +492,23 @@ const NewSection = () => {
                         </div>
                         <div className="flex gap-3 mt-4 pt-3 border-t border-slate-50">
                           <button
-                            onClick={() => addToCart(item)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(item);
+                            }}
                             className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all cursor-pointer"
                           >
                             Add to Cart
                           </button>
-                          <button className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(item);
+                            }}
+                            className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs cursor-pointer"
+                          >
                             Buy Now
                           </button>
                         </div>

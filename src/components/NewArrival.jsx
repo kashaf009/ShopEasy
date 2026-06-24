@@ -113,7 +113,10 @@ const NewArrival = () => {
       <section className="grid grid-cols-2 gap-5 pr-10">
         {/* left section */}
         <section className="">
-          <div className="shadow-md ">
+          <div
+            className="shadow-md cursor-pointer hover:shadow-lg transition-all"
+            onClick={() => navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`)}
+          >
             <img className="w-full" src={newArrivals[0].image} />
             <div className="flex px-7 justify-between mt-10">
               <p className="font-['manrope'] text-2xl font-bold">
@@ -129,7 +132,10 @@ const NewArrival = () => {
 
             <div className="px-7 ">
               <button
-                onClick={() => navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`);
+                }}
                 className="bg-white border-2 border-slate-900 w-full mt-5 mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-pointer"
               >
                 Shop Now
