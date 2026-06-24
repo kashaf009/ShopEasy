@@ -18,6 +18,7 @@ const Laptop = () => {
   const [selectedProcessors, setSelectedProcessors] = useState([]);
   const [selectedRam, setSelectedRam] = useState([]);
   const [selectedStorage, setSelectedStorage] = useState([]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -172,14 +173,14 @@ const Laptop = () => {
     priceRange < maxPrice;
 
   return (
-    <div className="mt-28 mb-20 px-4 md:px-8 font-['manrope'] max-w-7xl mx-auto">
+    <div className="mt-20 sm:mt-24 md:mt-28 mb-12 sm:mb-20 px-4 md:px-8 font-['manrope'] max-w-7xl mx-auto">
       {/* Header */}
-      <div className="mb-8 border-b border-slate-100 pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+      <div className="mb-6 sm:mb-8 border-b border-slate-100 pb-4 sm:pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-3 sm:gap-4">
         <div>
-          <h2 className='text-3xl font-extrabold tracking-tight text-slate-900 uppercase'>
+          <h2 className='text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 uppercase'>
             Laptops
           </h2>
-          <p className="font-medium text-slate-500 text-base mt-1">
+          <p className="font-medium text-slate-500 text-sm sm:text-base mt-1">
             Discover the latest in laptop technology and high-performance computing.
           </p>
         </div>
@@ -193,9 +194,23 @@ const Laptop = () => {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-slate-900"></div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          {/* Mobile/tablet filter toggle */}
+          <button
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            className="lg:hidden col-span-full flex items-center justify-center gap-2 bg-white border border-slate-200 rounded-2xl py-3 px-4 font-bold text-sm text-slate-900 shadow-sm cursor-pointer"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+            </svg>
+            {isFilterOpen ? "Hide Filters" : "Show Filters"}
+            {hasActiveFilters && (
+              <span className="bg-slate-900 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full">!</span>
+            )}
+          </button>
+
           {/* Left Column: Filter Panel */}
-          <div className="lg:col-span-1 bg-white border border-slate-100 rounded-3xl p-6 shadow-sm h-fit sticky top-24 max-h-[85vh] overflow-y-auto">
+          <div className={`lg:col-span-1 bg-white border border-slate-100 rounded-3xl p-4 sm:p-6 shadow-sm h-fit lg:sticky lg:top-24 max-h-[70vh] lg:max-h-[85vh] overflow-y-auto ${isFilterOpen ? "block" : "hidden lg:block"}`}>
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
                 <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -406,7 +421,7 @@ const Laptop = () => {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {filteredLaptops.map((items) => {
                   const { id, name, price, description, image, specs } = items;
 
@@ -414,7 +429,7 @@ const Laptop = () => {
                     <div
                       key={id}
                       onClick={() => navigate(`/product/${items.category || 'laptop'}/${id}`)}
-                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px] cursor-pointer"
+                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden min-h-[400px] sm:min-h-[440px] cursor-pointer"
                     >
                       {/* Image container */}
                       <Link to={`/product/${items.category || 'laptop'}/${id}`} className="relative aspect-video w-full overflow-hidden bg-slate-50 block">

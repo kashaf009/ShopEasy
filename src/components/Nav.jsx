@@ -15,6 +15,7 @@ const Nav = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Load all product data on mount
   useEffect(() => {
@@ -127,17 +128,30 @@ const Nav = () => {
     }
   };
 
+  const navLinks = [
+    { label: "Home", path: "/", type: "navigate" },
+    { label: "new", path: "/new", type: "link" },
+    { label: "Mobile", path: "/mobile", type: "navigate" },
+    { label: "Laptop", path: "/laptop", type: "link" },
+    { label: "Headphone", path: "/headphone", type: "navigate" },
+  ];
+
+  const handleNavClick = (path) => {
+    setIsMenuOpen(false);
+    navigate(path);
+  };
+
   return (
-    <div className="fixed z-40 top-0 w-full pl-8 pt-5 pr-12 backdrop-blur-xl items-center flex gap-10 mx-auto justify-between pb-5 shadow-sm">
-      {/* <img src="/img/shopEasy.png" alt="logo" className="w-40" /> */}
+    <div className="fixed z-40 top-0 w-full backdrop-blur-xl shadow-sm relative">
+      <div className="px-4 sm:px-6 md:px-8 lg:pl-8 lg:pr-12 pt-4 sm:pt-5 pb-4 sm:pb-5 flex items-center gap-4 md:gap-6 lg:gap-10 justify-between">
       <p
         onClick={() => navigate("/")}
-        className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-2xl cursor-pointer"
+        className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-xl sm:text-2xl cursor-pointer shrink-0"
       >
         SHOPEASY
       </p>
 
-      <ul className="ml-8 flex gap-7 list-none cursor-pointer">
+      <ul className="hidden lg:flex ml-8 gap-7 list-none cursor-pointer">
         <li
           onClick={() => navigate("/")}
           className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
@@ -171,14 +185,14 @@ const Nav = () => {
         </li>
       </ul>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         {/* Search with real-time results */}
         <div ref={searchRef} className="relative">
           <label
-            className={`flex items-center gap-2 border rounded-2xl px-3 py-1.5 transition-all duration-300 ${
+            className={`flex items-center gap-2 border rounded-2xl px-2.5 sm:px-3 py-1.5 transition-all duration-300 ${
               isSearchFocused
-                ? "border-slate-400 bg-white shadow-md w-72"
-                : "border-gray-500 bg-gray-100 w-40 sm:w-48"
+                ? "border-slate-400 bg-white shadow-md w-44 sm:w-56 md:w-72"
+                : "border-gray-500 bg-gray-100 w-9 sm:w-40 md:w-48"
             }`}
           >
             <svg
@@ -197,7 +211,9 @@ const Nav = () => {
               />
             </svg>
             <input
-              className="w-full bg-transparent outline-none text-sm font-['manrope'] text-slate-800 placeholder:text-slate-400"
+              className={`w-full bg-transparent outline-none text-sm font-['manrope'] text-slate-800 placeholder:text-slate-400 ${
+                isSearchFocused ? "block" : "hidden sm:block"
+              }`}
               type="text"
               placeholder="Search products..."
               value={searchQuery}
@@ -235,7 +251,7 @@ const Nav = () => {
 
           {/* Search Results Dropdown */}
           {isSearchOpen && (
-            <div className="absolute top-full right-0 mt-2 w-96 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
+            <div className="absolute top-full right-0 mt-2 w-[calc(100vw-2rem)] sm:w-80 md:w-96 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
               {/* Header */}
               <div className="px-4 py-3 border-b border-slate-100 bg-slate-50/50">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
@@ -354,7 +370,56 @@ const Nav = () => {
             </span>
           )}
         </button>
+
+        {/* Mobile menu toggle */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-all cursor-pointer"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+        >
+          {isMenuOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          )}
+        </button>
       </div>
+      </div>
+
+      {/* Mobile navigation menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-lg px-4 py-4">
+          <ul className="flex flex-col gap-1 list-none">
+            {navLinks.map((link) =>
+              link.type === "link" ? (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-4 py-3 rounded-xl hover:bg-slate-100 transition-all font-medium text-sm font-['manrope'] text-slate-700 capitalize"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ) : (
+                <li key={link.path}>
+                  <button
+                    onClick={() => handleNavClick(link.path)}
+                    className="w-full text-left px-4 py-3 rounded-xl hover:bg-slate-100 transition-all font-medium text-sm font-['manrope'] text-slate-700 capitalize cursor-pointer"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ),
+            )}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

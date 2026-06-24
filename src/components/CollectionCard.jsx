@@ -8,24 +8,24 @@ const CollectionCard = ({ icon, title, description }) => {
     navigate(`/${title.toLowerCase()}`);
   };
   return (
-    <div className="group p-8 cursor-pointer bg-white rounded-xl mb-25 border-b-2 border-transparent hover:border-slate-900 transition-all duration-300">
-      <div className="bg-gray-200 group-hover:bg-slate-900 transition-all duration-300 w-12 h-12 flex items-center justify-center  mb-6 rounded-md">
+    <div className="group p-5 sm:p-6 md:p-8 cursor-pointer bg-white rounded-xl mb-0 sm:mb-10 lg:mb-25 border-b-2 border-transparent hover:border-slate-900 transition-all duration-300">
+      <div className="bg-gray-200 group-hover:bg-slate-900 transition-all duration-300 w-12 h-12 flex items-center justify-center mb-4 sm:mb-6 rounded-md">
         <span className="h-7 w-7 group-hover:text-white transition-all duration-300">
           {icon}
         </span>
       </div>
 
-      <p className="text-slate-700 font-semibold text-2xl font-['manrope'] mb-3">
+      <p className="text-slate-700 font-semibold text-xl sm:text-2xl font-['manrope'] mb-2 sm:mb-3">
         {title}
       </p>
 
-      <p className="text-slate-500 font-['manrope'] mb-10 text-md ">
+      <p className="text-slate-500 font-['manrope'] mb-6 sm:mb-10 text-sm sm:text-base">
         {description}
       </p>
 
       <p
         onClick={() => handleClick(title)}
-        className="text-slate-900 uppercase flex items-center font-semibold tracking-widest text-sm font-['manrope']"
+        className="text-slate-900 uppercase flex items-center font-semibold tracking-widest text-xs sm:text-sm font-['manrope']"
       >
         Explore
         <span className="ml-2 group-hover:translate-x-2 transition-all duration-300">

@@ -12,8 +12,8 @@ This project demonstrates a scalable, component-based architecture using React, 
 
 ## ✨ Features
 
-- 📱 Product listing (Laptops, Mobiles, Tablets)
-- 🔍 Search and filtering
+- 📱 Product listing (Laptops, Mobiles, headphones)
+- � Real time Search and filtering
 - 🛒 Shopping cart functionality
 - ⚡ Fully responsive design
 - 🎨 Clean and modern UI

@@ -102,41 +102,49 @@ const NewArrival = () => {
     },
   ];
   return (
-    <div className="mt-20 pl-7 mb-10">
-      <p className="text-4xl font-['manrope'] font-bold mb-7">
+    <div className="mt-12 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8 lg:pl-7 lg:pr-10 mb-10 max-w-7xl mx-auto lg:max-w-none">
+      <p className="text-2xl sm:text-3xl md:text-4xl font-['manrope'] font-bold mb-4 sm:mb-7">
         <span className="text-slate-900 border-b-3">New</span> Arrivals
       </p>
-      <p className="text-slate-700 font-['manrope'] mb-10">
+      <p className="text-slate-700 font-['manrope'] mb-6 sm:mb-10 text-sm sm:text-base">
         Discover the latest in technology and design.
       </p>
 
-      <section className="grid grid-cols-2 gap-5 pr-10">
-        {/* left section */}
-        <section className="">
+      <section className="grid grid-cols-1 xl:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+        {/* Featured item */}
+        <section>
           <div
-            className="shadow-md cursor-pointer hover:shadow-lg transition-all"
-            onClick={() => navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`)}
+            className="shadow-md cursor-pointer hover:shadow-lg transition-all rounded-xl overflow-hidden"
+            onClick={() =>
+              navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`)
+            }
           >
-            <img className="w-full" src={newArrivals[0].image} />
-            <div className="flex px-7 justify-between mt-10">
-              <p className="font-['manrope'] text-2xl font-bold">
+            <img
+              className="w-full h-48 sm:h-56 md:h-64 lg:h-auto object-cover"
+              src={newArrivals[0].image}
+              alt={newArrivals[0].name}
+            />
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 px-4 sm:px-7 mt-6 sm:mt-10">
+              <p className="font-['manrope'] text-lg sm:text-xl md:text-2xl font-bold">
                 {newArrivals[0].name}
               </p>
-              <p className="font-['manrope'] tracking-tighter text-2xl font-semibold">
-                ₹{newArrivals[0].price}
+              <p className="font-['manrope'] tracking-tighter text-lg sm:text-xl md:text-2xl font-semibold shrink-0">
+                ₹{newArrivals[0].price.toLocaleString()}
               </p>
             </div>
-            <p className="px-7 text-[14px] pt-2 text-slate-600 ">
+            <p className="px-4 sm:px-7 text-xs sm:text-sm pt-2 text-slate-600">
               {newArrivals[0].description}
             </p>
 
-            <div className="px-7 ">
+            <div className="px-4 sm:px-7">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  navigate(`/product/${newArrivals[0].category}/${newArrivals[0].id}`);
+                  navigate(
+                    `/product/${newArrivals[0].category}/${newArrivals[0].id}`,
+                  );
                 }}
-                className="bg-white border-2 border-slate-900 w-full mt-5 mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-pointer"
+                className="bg-white border-2 border-slate-900 w-full mt-5 mb-6 sm:mb-10 text-slate-900 font-medium px-5 py-3 hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-pointer text-sm sm:text-base"
               >
                 Shop Now
               </button>
@@ -144,8 +152,8 @@ const NewArrival = () => {
           </div>
         </section>
 
-        {/* right section */}
-        <section className="grid grid-cols-2 gap-5">
+        {/* Grid of smaller cards */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {newArrivals.slice(1).map((items) => (
             <NewArrivalCard
               key={items.id}

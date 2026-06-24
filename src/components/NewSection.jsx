@@ -53,6 +53,7 @@ const NewSection = () => {
   const [maxPrice, setMaxPrice] = useState(0);
   const [minPrice, setMinPrice] = useState(0);
   const [priceRange, setPriceRange] = useState(0);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   useEffect(() => {
     const fetchNewArrival = async () => {
@@ -145,19 +146,25 @@ const NewSection = () => {
     selectedStorage.length ||
     priceRange < maxPrice;
 
+  const filterIcon = (
+    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+    </svg>
+  );
+
   return (
-    <div className="mt-28 mb-20 px-4 md:px-8 font-['manrope'] max-w-7xl mx-auto">
+    <div className="mt-20 sm:mt-24 md:mt-28 mb-12 sm:mb-20 px-4 md:px-8 font-['manrope'] max-w-7xl mx-auto">
       {/* Header */}
-      <div className="mb-8 border-b border-slate-100 pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+      <div className="mb-6 sm:mb-8 border-b border-slate-100 pb-4 sm:pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-3 sm:gap-4">
         <div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 uppercase">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 uppercase">
             New Arrivals
           </h2>
-          <p className="font-medium text-slate-500 text-base mt-1">
+          <p className="font-medium text-slate-500 text-sm sm:text-base mt-1">
             Discover the latest in technology and design.
           </p>
         </div>
-        <div className="text-sm font-semibold text-slate-600 bg-slate-100 px-4 py-2 rounded-full shadow-2xs">
+        <div className="text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 px-3 sm:px-4 py-2 rounded-full shadow-2xs whitespace-nowrap">
           Showing {filtered.length} of {newArrival.length} Items
         </div>
       </div>
@@ -167,35 +174,66 @@ const NewSection = () => {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-slate-900" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <>
+          {/* Mobile / tablet filter toggle */}
+          <button
+            type="button"
+            onClick={() => setIsFilterOpen((prev) => !prev)}
+            aria-expanded={isFilterOpen}
+            className="lg:hidden w-full flex items-center justify-between gap-2 bg-white border border-slate-200 rounded-2xl py-3 px-4 font-bold text-sm text-slate-900 shadow-sm cursor-pointer mb-4"
+          >
+            <span className="flex items-center gap-2">
+              {filterIcon}
+              {isFilterOpen ? "Hide Filters" : "Show Filters"}
+              {hasActiveFilters && (
+                <span className="bg-slate-900 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full">
+                  Active
+                </span>
+              )}
+            </span>
+            <svg
+              className={`w-5 h-5 text-slate-500 transition-transform duration-200 ${isFilterOpen ? "rotate-180" : ""}`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {/* Left: Filter Panel */}
-          <div className="lg:col-span-1 bg-white border border-slate-100 rounded-3xl p-6 shadow-sm h-fit sticky top-24 max-h-[85vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <div
+            className={`lg:col-span-1 bg-white border border-slate-100 rounded-3xl p-4 sm:p-6 shadow-sm h-fit lg:sticky lg:top-24 max-h-[65vh] sm:max-h-[70vh] lg:max-h-[85vh] overflow-y-auto custom-scrollbar ${
+              isFilterOpen ? "block" : "hidden lg:block"
+            }`}
+          >
+            <div className="flex justify-between items-center mb-4 sm:mb-6">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                {filterIcon}
                 Filters
               </h3>
-              {hasActiveFilters && (
-                <button
-                  onClick={handleClearAll}
-                  className="text-xs font-bold text-red-600 hover:text-red-700 hover:underline flex items-center gap-1 transition-all"
-                >
-                  <svg
-                    className="w-3.5 h-3.5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+              <div className="flex items-center gap-3">
+                {hasActiveFilters && (
+                  <button
+                    onClick={handleClearAll}
+                    className="text-xs font-bold text-red-600 hover:text-red-700 hover:underline flex items-center gap-1 transition-all cursor-pointer"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-                    />
+                    Clear All
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setIsFilterOpen(false)}
+                  className="lg:hidden p-1.5 rounded-lg text-slate-500 hover:bg-slate-100 cursor-pointer"
+                  aria-label="Close filters"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
-                  Clear All
                 </button>
-              )}
+              </div>
             </div>
             {/* Brand Filter */}
             <div className="space-y-6">
@@ -347,6 +385,15 @@ const NewSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Apply on mobile — closes panel after viewing results */}
+            <button
+              type="button"
+              onClick={() => setIsFilterOpen(false)}
+              className="lg:hidden w-full mt-4 bg-slate-900 text-white font-bold text-sm py-3 rounded-xl hover:bg-slate-800 transition-all cursor-pointer"
+            >
+              View {filtered.length} Result{filtered.length !== 1 ? "s" : ""}
+            </button>
           </div>
 
           {/* Right: Items Grid */}
@@ -395,16 +442,16 @@ const NewSection = () => {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {filtered.map((item) => {
                   const { id, name, price, description, image, specs } = item;
                   return (
                     <div
                       key={id}
                       onClick={() => navigate(`/product/${item.category || 'new'}/${id}`)}
-                      className="group bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden h-[440px] cursor-pointer"
+                      className="group bg-white border border-slate-100 rounded-2xl sm:rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden min-h-0 sm:min-h-[420px] cursor-pointer"
                     >
-                      <div className="relative aspect-video w-full overflow-hidden bg-slate-50 block">
+                      <div className="relative aspect-[4/3] sm:aspect-video w-full overflow-hidden bg-slate-50 block">
                         <img
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           src={image}
@@ -415,15 +462,15 @@ const NewSection = () => {
                           {name.split(" ")[0]}
                         </div>
                       </div>
-                      <div className="p-5 flex-1 flex flex-col justify-between">
+                      <div className="p-3 sm:p-5 flex-1 flex flex-col justify-between">
                         <div>
                             <h4
-                              className="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1"
+                              className="text-sm sm:text-base font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-2 sm:line-clamp-1 mb-1"
                               title={name}
                             >
                               {name}
                             </h4>
-                          <p className="text-lg font-black text-slate-900 mb-3">
+                          <p className="text-base sm:text-lg font-black text-slate-900 mb-2 sm:mb-3">
                             ₹{price.toLocaleString()}
                           </p>
                           {/* Specs badges */}
@@ -490,14 +537,14 @@ const NewSection = () => {
                             {description}
                           </p>
                         </div>
-                        <div className="flex gap-3 mt-4 pt-3 border-t border-slate-50">
+                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-3 sm:mt-4 pt-3 border-t border-slate-50">
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
                               e.preventDefault();
                               addToCart(item);
                             }}
-                            className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all cursor-pointer"
+                            className="flex-1 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-bold py-2 sm:py-2.5 px-3 rounded-xl hover:bg-slate-50 text-xs transition-all cursor-pointer"
                           >
                             Add to Cart
                           </button>
@@ -507,7 +554,7 @@ const NewSection = () => {
                               e.preventDefault();
                               addToCart(item);
                             }}
-                            className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs cursor-pointer"
+                            className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 sm:py-2.5 px-3 rounded-xl text-xs transition-all shadow-xs cursor-pointer"
                           >
                             Buy Now
                           </button>
@@ -520,6 +567,7 @@ const NewSection = () => {
             )}
           </div>
         </div>
+        </>
       )}
     </div>
   );
