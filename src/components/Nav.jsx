@@ -1,12 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import "@fontsource/manrope";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import axios from "axios";
 
 const Nav = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const navClass = (path) =>
+
+    `relative transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] cursor-pointer
+
+   ${location.pathname === path
+
+      ? "text-slate-900 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-slate-900 after:rounded-full"
+
+      : "text-slate-500 hover:text-slate-900"
+
+    }`;
   const { totalItemsCount, setIsCartOpen } = useCart();
+
+
+
+
 
   // Search state
   const [searchQuery, setSearchQuery] = useState("");
@@ -144,251 +161,251 @@ const Nav = () => {
   return (
     <div className="fixed z-40 top-0 w-full backdrop-blur-xl shadow-sm relative">
       <div className="px-4 sm:px-6 md:px-8 lg:pl-8 lg:pr-12 pt-4 sm:pt-5 pb-4 sm:pb-5 flex items-center gap-4 md:gap-6 lg:gap-10 justify-between">
-      <p
-        onClick={() => navigate("/")}
-        className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-xl sm:text-2xl cursor-pointer shrink-0"
-      >
-        SHOPEASY
-      </p>
-
-      <ul className="hidden lg:flex ml-8 gap-7 list-none cursor-pointer">
-        <li
+        <p
           onClick={() => navigate("/")}
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
+          className="font-['manrope'] font-bold text-slate-900 tracking-tighter text-xl sm:text-2xl cursor-pointer shrink-0"
         >
-          Home
-        </li>
-        <Link
-          to="/new"
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm text-slate-500 font-['manrope']"
-        >
-          new
-        </Link>
-        <li
-          onClick={() => navigate("/mobile")}
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
-        >
-          Mobile
-        </li>
+          SHOPEASY
+        </p>
 
-        <Link
-          to="/laptop"
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500"
-        >
-          Laptop
-        </Link>
-        <li
-          onClick={() => navigate("/headphone")}
-          className="hover:text-slate-900 transition-all duration-300 tracking-tight font-medium text-sm font-['manrope'] text-slate-500 cursor-pointer"
-        >
-          Headphone
-        </li>
-      </ul>
+        <ul className="hidden lg:flex ml-8 gap-7 list-none">
+  <li
+    onClick={() => navigate("/")}
+    className={navClass("/")}
+  >
+    Home
+  </li>
 
-      <div className="flex items-center gap-2 sm:gap-4">
-        {/* Search with real-time results */}
-        <div ref={searchRef} className="relative">
-          <label
-            className={`flex items-center gap-2 border rounded-2xl px-2.5 sm:px-3 py-1.5 transition-all duration-300 ${
-              isSearchFocused
-                ? "border-slate-400 bg-white shadow-md w-44 sm:w-56 md:w-72"
-                : "border-gray-500 bg-gray-100 w-9 sm:w-40 md:w-48"
-            }`}
-          >
-            <svg
-              className={`w-4 h-4 flex-shrink-0 transition-colors ${
-                isSearchFocused ? "text-slate-900" : "text-slate-400"
-              }`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
+  <Link
+    to="/new"
+    className={navClass("/new")}
+  >
+    New
+  </Link>
+
+  <li
+    onClick={() => navigate("/mobile")}
+    className={navClass("/mobile")}
+  >
+    Mobile
+  </li>
+
+  <Link
+    to="/laptop"
+    className={navClass("/laptop")}
+  >
+    Laptop
+  </Link>
+
+  <li
+    onClick={() => navigate("/headphone")}
+    className={navClass("/headphone")}
+  >
+    Headphone
+  </li>
+</ul>
+
+        <div className="flex items-center gap-2 sm:gap-4">
+          {/* Search with real-time results */}
+          <div ref={searchRef} className="relative">
+            <label
+              className={`flex items-center gap-2 border rounded-2xl px-2.5 sm:px-3 py-1.5 transition-all duration-300 ${isSearchFocused
+                  ? "border-slate-400 bg-white shadow-md w-44 sm:w-56 md:w-72"
+                  : "border-gray-500 bg-gray-100 w-9 sm:w-40 md:w-48"
+                }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-            <input
-              className={`w-full bg-transparent outline-none text-sm font-['manrope'] text-slate-800 placeholder:text-slate-400 ${
-                isSearchFocused ? "block" : "hidden sm:block"
-              }`}
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onFocus={() => {
-                setIsSearchFocused(true);
-                if (searchQuery.trim()) setIsSearchOpen(true);
-              }}
-              onKeyDown={handleSearchKeyDown}
-            />
-            {searchQuery && (
-              <button
-                onClick={() => {
-                  setSearchQuery("");
-                  setIsSearchOpen(false);
-                }}
-                className="flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors"
+              <svg
+                className={`w-4 h-4 flex-shrink-0 transition-colors ${isSearchFocused ? "text-slate-900" : "text-slate-400"
+                  }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  viewBox="0 0 24 24"
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <input
+                className={`w-full bg-transparent outline-none text-sm font-['manrope'] text-slate-800 placeholder:text-slate-400 ${isSearchFocused ? "block" : "hidden sm:block"
+                  }`}
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => {
+                  setIsSearchFocused(true);
+                  if (searchQuery.trim()) setIsSearchOpen(true);
+                }}
+                onKeyDown={handleSearchKeyDown}
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => {
+                    setSearchQuery("");
+                    setIsSearchOpen(false);
+                  }}
+                  className="flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            )}
-          </label>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              )}
+            </label>
 
-          {/* Search Results Dropdown */}
-          {isSearchOpen && (
-            <div className="absolute top-full right-0 mt-2 w-[calc(100vw-2rem)] sm:w-80 md:w-96 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
-              {/* Header */}
-              <div className="px-4 py-3 border-b border-slate-100 bg-slate-50/50">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                  {searchResults.length > 0
-                    ? `${searchResults.length} result${searchResults.length !== 1 ? "s" : ""} found`
-                    : "No results"}
-                </p>
-              </div>
+            {/* Search Results Dropdown */}
+            {isSearchOpen && (
+              <div className="absolute top-full right-0 mt-2 w-[calc(100vw-2rem)] sm:w-80 md:w-96 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
+                {/* Header */}
+                <div className="px-4 py-3 border-b border-slate-100 bg-slate-50/50">
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    {searchResults.length > 0
+                      ? `${searchResults.length} result${searchResults.length !== 1 ? "s" : ""} found`
+                      : "No results"}
+                  </p>
+                </div>
 
-              {searchResults.length > 0 ? (
-                <div className="max-h-[420px] overflow-y-auto">
-                  {searchResults.map((product) => (
-                    <button
-                      key={`${product.source}-${product.id}`}
-                      onClick={() => handleResultClick(product)}
-                      className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-50 transition-colors text-left border-b border-slate-50 last:border-b-0 cursor-pointer group"
-                    >
-                      {/* Thumbnail */}
-                      <div className="w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-100">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          loading="lazy"
-                        />
-                      </div>
-
-                      {/* Info */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <h4 className="text-sm font-bold text-slate-900 truncate group-hover:text-indigo-600 transition-colors">
-                            {product.name}
-                          </h4>
+                {searchResults.length > 0 ? (
+                  <div className="max-h-[420px] overflow-y-auto">
+                    {searchResults.map((product) => (
+                      <button
+                        key={`${product.source}-${product.id}`}
+                        onClick={() => handleResultClick(product)}
+                        className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-50 transition-colors text-left border-b border-slate-50 last:border-b-0 cursor-pointer group"
+                      >
+                        {/* Thumbnail */}
+                        <div className="w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-100">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            loading="lazy"
+                          />
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-black text-slate-800">
-                            ₹{product.price.toLocaleString()}
-                          </span>
-                          <span
-                            className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${getCategoryColor(
-                              product.source,
-                            )}`}
-                          >
-                            {getCategoryLabel(product.source)}
-                          </span>
-                        </div>
-                      </div>
 
-                      {/* Arrow */}
+                        {/* Info */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <h4 className="text-sm font-bold text-slate-900 truncate group-hover:text-indigo-600 transition-colors">
+                              {product.name}
+                            </h4>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-black text-slate-800">
+                              ₹{product.price.toLocaleString()}
+                            </span>
+                            <span
+                              className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${getCategoryColor(
+                                product.source,
+                              )}`}
+                            >
+                              {getCategoryLabel(product.source)}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Arrow */}
+                        <svg
+                          className="w-4 h-4 text-slate-300 group-hover:text-slate-500 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="px-4 py-8 flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-3">
                       <svg
-                        className="w-4 h-4 text-slate-300 group-hover:text-slate-500 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+                        className="w-6 h-6 text-slate-400"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2.5"
+                        strokeWidth="1.5"
                         viewBox="0 0 24 24"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
                         />
                       </svg>
-                    </button>
-                  ))}
-                </div>
-              ) : (
-                <div className="px-4 py-8 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-3">
-                    <svg
-                      className="w-6 h-6 text-slate-400"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                      />
-                    </svg>
+                    </div>
+                    <p className="text-sm font-bold text-slate-700 mb-1">
+                      No products found
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      Try a different keyword or check the spelling
+                    </p>
                   </div>
-                  <p className="text-sm font-bold text-slate-700 mb-1">
-                    No products found
-                  </p>
-                  <p className="text-xs text-slate-400">
-                    Try a different keyword or check the spelling
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+                )}
+              </div>
+            )}
+          </div>
 
-        <button
-          onClick={() => setIsCartOpen(true)}
-          className="relative p-2 rounded-xl text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-all cursor-pointer flex items-center justify-center"
-          aria-label="Open cart"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 rounded-xl text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-all cursor-pointer flex items-center justify-center"
+            aria-label="Open cart"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 10.5V6a3.75 3.75 0 1,0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0,1-1.12-1.243l1.264-12A1.125 1.125 0 0,1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1,1-.75 0 .375.375 0 0,1 .75 0Zm7.5 0a.375.375 0 1,1-.75 0 .375.375 0 0,1 .75 0Z"
-            />
-          </svg>
-          {totalItemsCount > 0 && (
-            <span className="absolute -top-1 -right-1 bg-slate-900 text-white text-[10px] font-black h-5 w-5 rounded-full flex items-center justify-center border-2 border-white shadow-xs animate-fade-in">
-              {totalItemsCount}
-            </span>
-          )}
-        </button>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1,0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0,1-1.12-1.243l1.264-12A1.125 1.125 0 0,1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1,1-.75 0 .375.375 0 0,1 .75 0Zm7.5 0a.375.375 0 1,1-.75 0 .375.375 0 0,1 .75 0Z"
+              />
+            </svg>
+            {totalItemsCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-slate-900 text-white text-[10px] font-black h-5 w-5 rounded-full flex items-center justify-center border-2 border-white shadow-xs animate-fade-in">
+                {totalItemsCount}
+              </span>
+            )}
+          </button>
 
-        {/* Mobile menu toggle */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-all cursor-pointer"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          )}
-        </button>
-      </div>
+          {/* Mobile menu toggle */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-all cursor-pointer"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile navigation menu */}
