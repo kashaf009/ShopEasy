@@ -19,11 +19,7 @@ const CurrentSection = () => {
       title: "Laptop",
       description: "Desktop power in a portable aluminum frame.",
     },
-    {
-      icon: <IoIosTabletPortrait className="h-7 w-7" />,
-      title: "Tablet",
-      description: "The ultimate canvas for digital artisans.",
-    },
+
     {
       icon: <CiHeadphones className="h-7 w-7" />,
       title: "Headphone",
@@ -41,7 +37,7 @@ const CurrentSection = () => {
         </p>
       </div>
 
-      <section className="grid grid-cols-4 gap-5  pr-10">
+      <section className="grid grid-cols-3 gap-5  pr-10">
         {Collections.map((items) => (
           <CollectionCard
             icon={items.icon}
