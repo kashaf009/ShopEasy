@@ -43,56 +43,6 @@ Vite	Development & Build Tool
 
 ⸻
 
-📸 Application Preview
-
-Add screenshots or GIFs here.
-
-* 🏠 Home Page
-* 🛍️ Product Listing
-* 🔍 Product Search & Filters
-* 📦 Product Details
-* 🛒 Shopping Cart
-* 📱 Mobile Responsive View
-
-⸻
-
-📂 Project Structure
-
-src
-├── assets
-├── components
-├── context
-├── data
-├── App.jsx
-├── main.jsx
-└── ...
-
-⸻
-
-🚀 Getting Started
-
-Clone the Repository
-
-git clone https://github.com/your-username/ShopEasy.git
-
-Navigate to the Project
-
-cd ShopEasy
-
-Install Dependencies
-
-npm install
-
-Run the Development Server
-
-npm run dev
-
-Build for Production
-
-npm run build
-
-⸻
-
 📚 What I Learned
 
 This project helped me strengthen my understanding of modern React development, including:
