@@ -39,7 +39,7 @@ const getProcessorCategory = (procStr) => {
   return "Other";
 };
 
-const NewSection = () => {
+const NewproductSection = () => {
   const { addToCart } = useCart();
   const navigate = useNavigate();
   const [newArrival, setNewArrival] = useState([]);
@@ -573,4 +573,4 @@ const NewSection = () => {
   );
 };
 
-export default NewSection;
+export default NewproductSection;

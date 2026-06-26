@@ -7,12 +7,7 @@ import Laptop from "./components/Laptop";
 import Mobile from "./components/Mobile";
 import Headphone from "./components/Headphone";
 import ProductDetail from "./components/ProductDetail";
-import NewSection from "./components/NewSection";
-
-
-
-
-
+import NewproductSection from "./components/NewproductSection";
 
 const App = () => {
   return (
@@ -20,8 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Body />}>
           <Route path="/" element={<Container />} />
-          <Route path="/newproduct" element={<NewSection/>}/>
-         
+          <Route path="/new" element={<NewproductSection />} />
           <Route path="/laptop" element={<Laptop />} />
           <Route path="/mobile" element={<Mobile />} />
 
