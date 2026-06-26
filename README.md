@@ -109,18 +109,6 @@ This project helped me strengthen my understanding of modern React development, 
 
 ⸻
 
-🎯 Future Improvements
-
-* User Authentication
-* Wishlist Functionality
-* Product Reviews & Ratings
-* Checkout & Payment Integration
-* Order History
-* Backend API Integration
-* Admin Dashboard
-* Dark Mode
-
-⸻
 
 👨‍💻 Author
 
