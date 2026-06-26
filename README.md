@@ -8,7 +8,7 @@ ShopEasy delivers a seamless online shopping experience with real-time product s
 
 🌐 Live Demo
 
-🔗 Website: https://kashafshopeasy.netlify.app/
+[![Live Demo](https://img.shields.io/badge/🚀-Preview%20Website-blue?style=for-the-badge)](https://kashafshopeasy.netlify.app/)
 
 ⸻
 
