@@ -1,12 +1,18 @@
 import React from "react";
 import Container from "./components/Container";
 import { Routes, Route } from "react-router-dom";
-import NewSection from "./components/newSection";
+
 import Body from "./components/Body";
 import Laptop from "./components/Laptop";
 import Mobile from "./components/Mobile";
 import Headphone from "./components/Headphone";
 import ProductDetail from "./components/ProductDetail";
+import NewSection from "./components/NewSection";
+
+
+
+
+
 
 const App = () => {
   return (
@@ -14,7 +20,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Body />}>
           <Route path="/" element={<Container />} />
-          <Route path="/new" element={<NewSection />} />
+          <Route path="/newproduct" element={<NewSection/>}/>
+         
           <Route path="/laptop" element={<Laptop />} />
           <Route path="/mobile" element={<Mobile />} />
 
