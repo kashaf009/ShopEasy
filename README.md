@@ -29,20 +29,6 @@ ShopEasy delivers a seamless online shopping experience with real-time product s
 
 ⸻
 
-🛠️ Tech Stack
-
-Technology	Purpose
-React.js	Frontend Library
-Redux	Global State Management
-React Router	Client-side Routing
-Tailwind CSS	Responsive UI Styling
-JavaScript (ES6+)	Application Logic
-Axios	Data Fetching
-Context API	Shared State
-Vite	Development & Build Tool
-
-⸻
-
 📚 What I Learned
 
 This project helped me strengthen my understanding of modern React development, including:
